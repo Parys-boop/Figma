@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #2d2c2c;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  background-color: #472CA7;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  margin-bottom: 50px;
+}
+
+.logo-circle {
+  background-color: #D9D9D9;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-text {
+  color: #233A7C;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.welcome-text {
+  text-align: left;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.brand {
+  color: white;
+  font-weight: 700;
+  text-decoration: underline;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.user-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-item img {
+  background-color: #D9D9D9;
+  padding: 10px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.menu-item button {
+  margin-top: 10px;
+  background-color: #D9D9D9;
+  border: none;
+  color: #472CA7;
+  padding: 5px 15px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-item button:hover {
+  background-color: #c1c1c1;
+}
+
+/* Actions */
+.actions {
+  text-align: center;
+}
+
+.login-button {
+  background-color: #472CA7;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #321c89;
+}
+
+.signup {
+  margin-top: 15px;
+  color: white;
+}
+
+.signup a {
+  color: #2359E5;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 400px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .welcome-text {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}

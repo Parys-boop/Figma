@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #2D2C2C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 387px;
+  background: #2D2C2C;
+  padding: 20px;
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 80px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.name {
+  color: #472CA7;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.info-box {
+  background: #472CA7;
+  border-radius: 6px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.label {
+  margin-bottom: 15px;
+  text-align: center;
+  background: #1A1A1A;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.text {
+  font-weight: bold;
+  text-align: left;
+}
+
+.hours {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+}
+
+.button-box {
+  background: #472CA7;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.arrow {
+  font-family: 'Merriweather', serif;
+  font-size: 24px;
+}
