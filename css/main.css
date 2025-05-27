@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 1;
   padding: 0;
   font-family: 'Inter', sans-serif;
 }
@@ -10,16 +10,13 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
 }
 
-/* Header */
+
 .header {
   background-color: #472CA7;
   width: 100%;
-  max-width: 500px;
   padding: 30px;
   border-radius: 6px;
   display: flex;
@@ -46,7 +43,7 @@ body {
 }
 
 .welcome-text {
-  text-align: left;
+  text-align: center;
   flex: 1;
   margin-left: 10px;
 }
