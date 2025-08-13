@@ -6,6 +6,11 @@
   font-family: 'Inter', sans-serif;
 }
 
+.titulo {
+  font-size: var(--fonte-normal); /* Herda do global */
+}
+
+
 /* Fundo geral preto fosco */
 body {
   background-color: #1c1c1c; /* preto fosco */

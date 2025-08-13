@@ -7,6 +7,11 @@
   padding: 0;
 }
 
+.titulo {
+  font-size: var(--fonte-normal); /* Herda do global */
+}
+
+
 body {
   background-color: #222222; /* preto fosco */
   font-family: 'Inter', sans-serif;

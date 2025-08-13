@@ -5,7 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Notícia - Centro Paula Souza</title>
   <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet" />
-  <link href="css/main.css" rel="stylesheet" />
+  <link href="css/noticias.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/global.css">
+
+  <div class="font-controls">
+    <button id="font-decrease" aria-label="Diminuir tamanho da fonte" title="Diminuir tamanho da fonte">A-</button>
+    <button id="font-reset" aria-label="Tamanho original da fonte" title="Tamanho original da fonte">A</button>
+    <button id="font-increase" aria-label="Aumentar tamanho da fonte" title="Aumentar tamanho da fonte">A+</button>
+  </div>
+  <div class="accessibility-tools">
+  <!-- Botão de Inversão de Cores -->
+    <button id="invert-colors" aria-label="Inverter cores do site" title="Modo de alto contraste">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+        <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke="currentColor" stroke-width="2"/>
+        <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4.92993 4.92999L6.33993 6.33999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M17.6599 17.66L19.0699 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M4.92993 19.07L6.33993 17.66" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M17.6599 6.33999L19.0699 4.92999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+     </svg>
+    </button>
+  </div>
 </head>
 <body>
   <div class="container">
@@ -28,5 +52,6 @@
       </div>
     </div>
   </div>
+  <script src="js/acessibilidade.js"></script>
 </body>
 </html>

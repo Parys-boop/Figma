@@ -1,0 +1,180 @@
+/* Estilos para a página de Login */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Fundo geral preto fosco */
+body {
+  background-color: #1c1c1c; /* preto fosco */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Container do login */
+.login-container {
+  background-color: #272727; /* um pouco mais claro que o fundo */
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(71, 44, 167, 0.4);
+  text-align: center;
+}
+
+/* Avatar */
+.avatar {
+  margin-bottom: 30px;
+}
+
+.avatar span {
+  display: inline-block;
+  background-color: #472CA7;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  line-height: 80px;
+  font-size: 40px;
+}
+
+/* Formulário de login */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+}
+
+.login-form label {
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #d9d9d9;
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  transition: outline 0.3s ease;
+}
+
+.login-form input:focus {
+  outline: 2px solid #472CA7;
+}
+
+.login-form button {
+  background-color: #472CA7;
+  color: white;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 14px 0;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.login-form button:hover {
+  background-color: #371f85;
+}
+
+/* Link "Esqueceu a senha" */
+.forgot-password {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.forgot-password a {
+  color: #aaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #472CA7;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 25px 20px;
+  }
+  
+  .avatar span {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 35px;
+  }
+  
+  .login-form {
+    gap: 15px;
+  }
+  
+  .login-form input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .login-form button {
+    padding: 12px 0;
+    font-size: 14px;
+  }
+}
+
+.titulo {
+  font-size: var(--fonte-normal); /* Herda do global */
+}
+
+
+@media (max-width: 350px) {
+  .login-container {
+    padding: 20px 15px;
+  border-radius: 10px;
+  }
+  
+  .avatar span {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+  }
+  
+  .login-form label {
+    font-size: 13px;
+  }
+  
+  .login-form input {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  
+  .login-form button {
+    padding: 10px 0;
+    font-size: 13px;
+  }
+  
+  .forgot-password {
+    font-size: 13px;
+  }
+}

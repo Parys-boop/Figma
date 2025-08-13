@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+.titulo {
+  font-size: var(--fonte-normal); /* Herda do global */
+}
+
+
 body {
   background-color: #121212; /* preto fosco */
   color: white;
