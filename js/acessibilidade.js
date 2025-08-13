@@ -70,3 +70,26 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('colorInvert', isInverted ? 'enabled' : 'disabled');
   });
 });
+
+// Botão de voltar ao topo
+document.addEventListener('DOMContentLoaded', function() {
+  const backToTopButton = document.getElementById('back-to-top');
+  
+  // Mostrar ou esconder o botão quando o usuário rolar a página
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+      backToTopButton.style.display = 'flex';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+  
+  // Rolagem suave quando o botão for clicado
+  backToTopButton.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
