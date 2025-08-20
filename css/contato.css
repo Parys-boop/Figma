@@ -155,3 +155,43 @@ body {
     padding: 8px 0;
   }
 }
+
+/* Adicione este código ao seu arquivo contato.css */
+
+/* Ajusta o nome do perfil */
+.name {
+    font-size: 2rem; /* Tamanho relativo para o título principal */
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Ajusta a caixa de informações */
+.info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; /* Espaçamento relativo entre os campos */
+    width: 100%;
+}
+
+.field {
+    font-size: 1rem; /* Define um tamanho base para os campos */
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.hours {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+/* Ajusta o botão de voltar */
+.button-box {
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem; /* Espaçamento interno relativo */
+    border-radius: 2rem; /* Borda relativa */
+    font-size: 1.1rem; /* Tamanho da fonte do botão */
+}

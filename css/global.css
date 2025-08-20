@@ -38,6 +38,10 @@
 }
 
 /* Classes para controle de tamanho */
+.font-xsmall {
+  font-size: 0.75rem !important;
+}
+
 .font-small {
   font-size: 0.85rem !important;
 }
@@ -49,6 +53,15 @@
 .font-xlarge {
   font-size: 1.3rem !important;
 }
+
+.font-xxlarge {
+  font-size: 1.5rem !important;
+}
+
+.font-xxxlarge {
+  font-size: 1.7rem !important;
+}
+
 
 /* Estilo do Botão */
 #invert-colors {
@@ -138,4 +151,48 @@
 /* Ajuste para modo de alto contraste */
 .color-invert #back-to-top {
   filter: invert(1) hue-rotate(180deg);
+}
+
+/* Adicione este código ao seu arquivo cadastro.css */
+
+/* Estilos para o formulário que se adaptam à mudança de fonte */
+.form {
+    width: 100%;
+    max-width: 400px; /* Define uma largura máxima */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaçamento entre os elementos do formulário */
+}
+
+.form label {
+    font-size: 1rem; /* 1rem = tamanho da fonte base (do <html>) */
+    font-weight: bold;
+    margin-bottom: -0.5rem; /* Ajusta o espaço entre o label e o input */
+}
+
+.form input {
+    font-size: 1rem;
+    padding: 0.8rem 1rem; /* Espaçamento interno */
+    border: 1px solid #ccc;
+    border-radius: 0.5rem; /* Bordas arredondadas */
+    width: 100%;
+    box-sizing: border-box; /* Garante que padding não afete a largura total */
+}
+
+.form button[type="submit"] {
+    font-size: 1.1rem; /* Um pouco maior para destaque */
+    font-weight: bold;
+    padding: 1rem;
+    background-color: #472CA7; /* Cor que você já usa */
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 1rem; /* Espaço acima do botão */
+    transition: background-color 0.3s;
+}
+
+.form button[type="submit"]:hover {
+    background-color: #3a2390; /* Cor do hover que você já usa */
 }
