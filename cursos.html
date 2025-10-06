@@ -1,91 +1,345 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cursos Disponíveis</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/cursos.css" />
-  <link rel="stylesheet" href="css/global.css">
-
-  <div class="font-controls">
-    <button id="font-decrease" aria-label="Diminuir tamanho da fonte" title="Diminuir tamanho da fonte">A-</button>
-    <button id="font-reset" aria-label="Tamanho original da fonte" title="Tamanho original da fonte">A</button>
-    <button id="font-increase" aria-label="Aumentar tamanho da fonte" title="Aumentar tamanho da fonte">A+</button>
-  </div>
-
-  <div class="accessibility-tools">
-  <!-- Botão de Inversão de Cores -->
-    <button id="invert-colors" aria-label="Inverter cores do site" title="Modo de alto contraste">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4.92993 4.92999L6.33993 6.33999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M17.6599 17.66L19.0699 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4.92993 19.07L6.33993 17.66" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M17.6599 6.33999L19.0699 4.92999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-     </svg>
-    </button>
-  </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - Intelectus+</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/cursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <header class="topo">
-      <img src="images/v4_17.png" alt="Logo" class="logo" />
-      <h1 class="titulo">Cursos Disponíveis</h1>
+    <!-- Header com Navegação -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Intelectus<span>+</span></h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="menu.html">Home</a></li>
+                    <li><a href="cursos.html" class="active">Cursos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <section class="curso-card">
-      <img src="images/v9_40.png" alt="Análise e Desenvolvimento de Sistemas" class="img-curso" />
-      <div class="curso-conteudo">
-        <h2>Análise e Desenvolvimento de Sistemas</h2>
-        <p>Curso focado na criação, manutenção e evolução de softwares. O aluno aprende a programar, modelar sistemas, desenvolver aplicativos e trabalhar com bancos de dados.</p>
-      </div>
-    </section>
-
-    <section class="curso-card">
-      <img src="images/v9_56.png" alt="Gestão Empresarial" class="img-curso" />
-      <div class="curso-conteudo">
-        <h2>Gestão Empresarial</h2>
-        <p>Voltado para quem quer liderar, empreender ou administrar empresas. O curso ensina planejamento estratégico, finanças, marketing, recursos humanos e processos organizacionais.</p>
-      </div>
-    </section>
-
-    <section class="curso-card">
-      <img src="images/v9_66.png" alt="Sistemas para Internet" class="img-curso" />
-      <div class="curso-conteudo">
-        <h2>Sistemas para a Internet</h2>
-        <p>Esse curso é voltado ao desenvolvimento de aplicações web e serviços online. O aluno aprende programação para internet, design de interfaces, segurança da informação e banco de dados.</p>
-      </div>
-    </section>
-
-    <footer class="rodape">
-      <span class="icone-voltar">&lt;</span>
-      <span class="texto-voltar"><a href="menu.html" style="color: inherit; text-decoration: none; outline: none;">Voltar</a></span>
-    </footer>
-  </div>
-
-  <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 15L12 8L19 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
-
-
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
+    <!-- Barra de Acessibilidade -->
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button id="decrease-font" class="accessibility-btn" title="Diminuir fonte">
+                    <i class="fas fa-font"></i><span>A-</span>
+                </button>
+                <button id="normal-font" class="accessibility-btn" title="Fonte normal">
+                    <i class="fas fa-font"></i><span>A</span>
+                </button>
+                <button id="increase-font" class="accessibility-btn" title="Aumentar fonte">
+                    <i class="fas fa-font"></i><span>A+</span>
+                </button>
+                <button id="toggle-contrast" class="accessibility-btn" title="Alto contraste">
+                    <i class="fas fa-adjust"></i>
+                </button>
+                <div vw class="enabled">
+                    <div vw-access-button class="active"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-<script src="js/acessibilidade.js"></script>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Descubra Seu Próximo Curso</h2>
+                <p class="hero-subtitle">Aprenda com os melhores cursos online e desenvolva suas habilidades</p>
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-courses" placeholder="Buscar cursos...">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="tecnologia">Tecnologia</button>
+                <button class="filter-btn" data-filter="negocios">Negócios</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grid de Cursos -->
+    <section class="courses-section">
+        <div class="container">
+            <div class="courses-grid">
+                
+                <!-- Curso 1 -->
+                <div class="course-card" data-category="tecnologia">
+                    <div class="course-image">
+                        <img src="images/curso-python.jpg" alt="Curso Python" onerror="this.src='https://via.placeholder.com/400x250/667eea/ffffff?text=Python+Completo'">
+                        <div class="course-badge">Bestseller</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-header">
+                            <span class="course-category">Tecnologia</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">Python Completo - Do Básico ao Avançado</h3>
+                        <p class="course-description">Aprenda Python desde os fundamentos até desenvolvimento web, automação e análise de dados.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>40h de conteúdo</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>12.450 alunos</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price-old">R$ 299,90</span>
+                                <span class="price-current">R$ 149,90</span>
+                            </div>
+                            <button class="btn-enroll">Inscrever-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 2 -->
+                <div class="course-card" data-category="design">
+                    <div class="course-image">
+                        <img src="images/curso-ux.jpg" alt="Curso UX/UI" onerror="this.src='https://via.placeholder.com/400x250/764ba2/ffffff?text=UX/UI+Design'">
+                        <div class="course-badge new">Novo</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-header">
+                            <span class="course-category">Design</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">UX/UI Design: Crie Experiências Incríveis</h3>
+                        <p class="course-description">Domine os princípios de UX/UI Design e crie interfaces modernas e intuitivas com Figma.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>35h de conteúdo</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>8.320 alunos</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price-old">R$ 349,90</span>
+                                <span class="price-current">R$ 179,90</span>
+                            </div>
+                            <button class="btn-enroll">Inscrever-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 3 -->
+                <div class="course-card" data-category="negocios">
+                    <div class="course-image">
+                        <img src="images/curso-marketing.jpg" alt="Curso Marketing Digital" onerror="this.src='https://via.placeholder.com/400x250/667eea/ffffff?text=Marketing+Digital'">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-header">
+                            <span class="course-category">Negócios</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.7</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">Marketing Digital na Prática</h3>
+                        <p class="course-description">Estratégias completas de marketing digital: SEO, Google Ads, redes sociais e muito mais.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>28h de conteúdo</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>15.890 alunos</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price-old">R$ 279,90</span>
+                                <span class="price-current">R$ 139,90</span>
+                            </div>
+                            <button class="btn-enroll">Inscrever-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 4 -->
+                <div class="course-card" data-category="tecnologia">
+                    <div class="course-image">
+                        <img src="images/curso-javascript.jpg" alt="Curso JavaScript" onerror="this.src='https://via.placeholder.com/400x250/764ba2/ffffff?text=JavaScript+Moderno'">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-header">
+                            <span class="course-category">Tecnologia</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">JavaScript Moderno: ES6+</h3>
+                        <p class="course-description">Aprenda JavaScript moderno, React, Node.js e crie aplicações web completas.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>50h de conteúdo</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>18.200 alunos</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price-old">R$ 329,90</span>
+                                <span class="price-current">R$ 169,90</span>
+                            </div>
+                            <button class="btn-enroll">Inscrever-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 5 -->
+                <div class="course-card" data-category="design">
+                    <div class="course-image">
+                        <img src="images/curso-adobe.jpg" alt="Curso Adobe" onerror="this.src='https://via.placeholder.com/400x250/667eea/ffffff?text=Adobe+Creative'">
+                        <div class="course-badge">Popular</div>
+                    </div>
+                    <div class="course-content">
+                        <div class="course-header">
+                            <span class="course-category">Design</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">Adobe Creative Suite Completo</h3>
+                        <p class="course-description">Photoshop, Illustrator, Premiere e After Effects do zero ao profissional.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>60h de conteúdo</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>10.550 alunos</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price-old">R$ 399,90</span>
+                                <span class="price-current">R$ 199,90</span>
+                            </div>
+                            <button class="btn-enroll">Inscrever-se</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 6 -->
+                <div class="course-card" data-category="negocios">
+                    <div class="course-image">
+                        <img src="images/curso-excel.jpg" alt="Curso Excel" onerror="this.src='https://via.placeholder.com/400x250/764ba2/ffffff?text=Excel+Avançado'">
+                    </div>
+                    <div class="course-content">
+                        <div class="course-header">
+                            <span class="course-category">Negócios</span>
+                            <div class="course-rating">
+                                <i class="fas fa-star"></i>
+                                <span>4.6</span>
+                            </div>
+                        </div>
+                        <h3 class="course-title">Excel Avançado para Negócios</h3>
+                        <p class="course-description">Dashboards, macros, VBA e análise de dados profissional com Excel.</p>
+                        <div class="course-meta">
+                            <div class="meta-item">
+                                <i class="fas fa-clock"></i>
+                                <span>32h de conteúdo</span>
+                            </div>
+                            <div class="meta-item">
+                                <i class="fas fa-users"></i>
+                                <span>9.870 alunos</span>
+                            </div>
+                        </div>
+                        <div class="course-footer">
+                            <div class="course-price">
+                                <span class="price-old">R$ 249,90</span>
+                                <span class="price-current">R$ 119,90</span>
+                            </div>
+                            <button class="btn-enroll">Inscrever-se</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Intelectus<span>+</span></h3>
+                    <p>Sua plataforma de cursos online para desenvolvimento profissional e pessoal.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="menu.html">Home</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Intelectus+. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" class="back-to-top" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="js/global.js"></script>
+    <script src="js/cursos.js"></script>
 </body>
 </html>
