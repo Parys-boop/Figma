@@ -1,233 +1,99 @@
-/* Estilos para a página de Login */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+.login-section {
+    background: #f8f9fa;
+    padding: 70px 0 50px 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
 }
 
-/* Fundo geral preto fosco */
-body {
-  background-color: #1c1c1c; /* preto fosco */
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-}
-
-/* Container do login */
-.login-container {
-  background-color: #272727; /* um pouco mais claro que o fundo */
-  border-radius: 12px;
-  padding: 30px 25px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 0 15px rgba(71, 44, 167, 0.4);
-  text-align: center;
-}
-
-/* Avatar */
-.avatar {
-  margin-bottom: 30px;
-}
-
-.avatar span {
-  display: inline-block;
-  background-color: #472CA7;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  line-height: 80px;
-  font-size: 40px;
-}
-
-/* Formulário de login */
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left;
-}
-
-.login-form label {
-  font-weight: 700;
-  font-size: 14px;
-  color: white;
-  display: block;
-  margin-bottom: 8px;
-}
-
-.login-form input {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 8px;
-  border: none;
-  background-color: #d9d9d9;
-  color: #222;
-  font-size: 16px;
-  font-weight: 600;
-  outline: none;
-  transition: outline 0.3s ease;
-}
-
-.login-form input:focus {
-  outline: 2px solid #472CA7;
-}
-
-.login-form button {
-  background-color: #472CA7;
-  color: white;
-  font-weight: 800;
-  font-size: 16px;
-  padding: 14px 0;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  margin-top: 10px;
-  width: 100%;
-}
-
-.login-form button:hover {
-  background-color: #371f85;
-}
-
-/* Link "Esqueceu a senha" */
-.forgot-password {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #aaa;
-}
-
-.forgot-password a {
-  color: #aaa;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.forgot-password a:hover {
-  color: #472CA7;
-}
-
-/* Responsividade */
-@media (max-width: 480px) {
-  .login-container {
-    padding: 25px 20px;
-  }
-  
-  .avatar span {
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    font-size: 35px;
-  }
-  
-  .login-form {
-    gap: 15px;
-  }
-  
-  .login-form input {
-    padding: 10px 12px;
-    font-size: 14px;
-  }
-  
-  .login-form button {
-    padding: 12px 0;
-    font-size: 14px;
-  }
-}
-
-.titulo {
-  font-size: var(--fonte-normal); /* Herda do global */
-}
-
-
-@media (max-width: 350px) {
-  .login-container {
-    padding: 20px 15px;
-  border-radius: 10px;
-  }
-  
-  .avatar span {
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 30px;
-  }
-  
-  .login-form label {
-    font-size: 13px;
-  }
-  
-  .login-form input {
-    padding: 8px 10px;
-    font-size: 13px;
-  }
-  
-  .login-form button {
-    padding: 10px 0;
-    font-size: 13px;
-  }
-  
-  .forgot-password {
-    font-size: 13px;
-  }
-}
-
-/* Adicione este código ao seu arquivo login.css */
-
-/* Ajusta o ícone do avatar */
-.avatar span {
-    font-size: 4rem; /* Tamanho relativo para o emoji/ícone */
-    display: block;
-    margin-bottom: 1.5rem;
-}
-
-/* Estilos escaláveis para o formulário de login */
-.login-form {
-    width: 100%;
+.login-card {
+    background: white;
     max-width: 400px;
+    margin: 0 auto;
+    padding: 45px 40px 35px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(102,126,234,0.09);
+    text-align: center;
+}
+
+.login-card h2 {
+    font-size: 2rem;
+    color: #667eea;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.login-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem; /* Espaçamento relativo */
+    gap: 17px;
 }
 
-.login-form label {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: -0.5rem;
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 4px;
 }
 
-.login-form input {
+.input-group label {
+    font-weight: 600;
+    color: #764ba2;
     font-size: 1rem;
-    padding: 0.8rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
+}
+
+.input-group input {
     width: 100%;
-    box-sizing: border-box;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.2s;
 }
 
-.login-form button[type="submit"] {
-    font-size: 1.1rem;
-    font-weight: bold;
-    padding: 1rem;
-    background-color: #472CA7;
+.input-group input:focus {
+    border-color: #667eea;
+}
+
+.btn-login-form {
+    padding: 13px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+    font-weight: 600;
+    border-radius: 12px;
     border: none;
-    border-radius: 0.5rem;
+    font-size: 1.09rem;
+    margin-top: 10px;
+    transition: background 0.2s, box-shadow 0.3s;
+    box-shadow: 0 5px 18px rgba(102,126,234,0.15);
     cursor: pointer;
-    text-transform: uppercase;
-    margin-top: 1rem;
 }
 
-/* Ajusta o link "Esqueceu a senha?" */
-.forgot-password {
-    margin-top: 1.2rem;
-    font-size: 0.9rem; /* Levemente menor que o texto principal */
-    text-align: center;
+.btn-login-form:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 12px 32px rgba(102,126,234,0.23);
+}
+
+.login-links {
+    margin-top: 22px;
+    font-size: 0.96rem;
+    color: #667eea;
+}
+
+.login-links a {
+    color: #764ba2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.login-links a:hover {
+    color: #667eea;
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    .login-card { padding: 24px 12px 20px 12px; }
+    .login-card h2 { font-size: 1.2rem; }
 }

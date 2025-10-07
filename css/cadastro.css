@@ -1,137 +1,106 @@
-/* Cadastro */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+
+
+.cadastro-section {
+    background: #f8f9fa;
+    padding: 70px 0 50px 0;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
 }
 
-.titulo {
-  font-size: var(--fonte-normal); /* Herda do global */
+.cadastro-card {
+    background: white;
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 45px 36px 35px 36px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(102,126,234,0.09);
+    text-align: center;
 }
 
-
-/* Fundo geral preto fosco */
-body {
-  background-color: #1c1c1c; /* preto fosco */
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 20px;
+.cadastro-card h2 {
+    font-size: 2rem;
+    color: #667eea;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 
-/* Container da página */
-.container {
-  background-color: #272727; /* um pouco mais claro que o fundo */
-  border-radius: 12px;
-  padding: 30px 20px 40px 20px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 0 15px rgba(71, 44, 167, 0.4);
-  text-align: center;
+.cadastro-form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
 }
 
-/* Avatar círculo roxo com ícone preto */
-.avatar .circle {
-  background-color: #472CA7;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 30px auto;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 4px;
 }
 
-.avatar img {
-  width: 50px;
-  height: 50px;
-  filter: brightness(0) invert(1); /* deixa o ícone preto como branco para contraste */
+.input-group label {
+    font-weight: 600;
+    color: #764ba2;
+    font-size: 1rem;
 }
 
-/* Formulário */
-.form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left;
+.input-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border 0.2s;
 }
 
-/* Labels */
-.form label {
-  font-weight: 700;
-  font-size: 14px;
-  color: white;
-  margin-bottom: 6px;
+.input-group input:focus {
+    border-color: #667eea;
 }
 
-/* Inputs */
-.form input {
-  padding: 10px 15px;
-  border-radius: 8px;
-  border: none;
-  background-color: #d9d9d9; 
-  color: #222;
-  font-size: 16px;
-  font-weight: 600;
-  outline-color: #472CA7;
-  transition: outline-color 0.3s ease;
+.btn-cadastro-form {
+    padding: 13px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    font-size: 1.09rem;
+    margin-top: 10px;
+    transition: background 0.2s, box-shadow 0.3s;
+    box-shadow: 0 5px 18px rgba(102,126,234,0.15);
+    cursor: pointer;
 }
 
-.form input::placeholder {
-  font-weight: 700;
-  color: #555;
+.btn-cadastro-form:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 12px 32px rgba(102,126,234,0.23);
 }
 
-.form input:focus {
-  outline: 2px solid #472CA7;
+.cadastro-links {
+    margin-top: 22px;
+    font-size: 0.96rem;
+    color: #667eea;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
 }
 
-/* Botão */
-.form button {
-  background-color: #472CA7;
-  color: white;
-  font-weight: 800;
-  font-size: 16px;
-  padding: 12px 0;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
+.cadastro-links a {
+    color: #764ba2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
 }
 
-.form button:hover {
-  background-color: #371f85;
+.cadastro-links a:hover {
+    color: #667eea;
+    text-decoration: underline;
 }
 
-/* Responsividade */
-@media (max-width: 420px) {
-  .container {
-    padding: 25px 15px 35px 15px;
-    max-width: 100%;
-  }
-
-  .avatar .circle {
-    width: 80px;
-    height: 80px;
-  }
-
-  .avatar img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .form input {
-    font-size: 14px;
-    padding: 9px 12px;
-  }
-
-  .form button {
-    font-size: 14px;
-    padding: 10px 0;
-  }
+@media (max-width: 480px) {
+    .cadastro-card { padding: 24px 10px 20px 10px; }
+    .cadastro-card h2 { font-size: 1.2rem; }
 }

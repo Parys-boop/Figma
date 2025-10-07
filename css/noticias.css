@@ -1,161 +1,108 @@
-/* noticias.css - Estilos para a página de notícias */
-
-/* Reset e estilos base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.noticias-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 60px 0 30px;
+    text-align: center;
 }
 
-body {
-  background-color: #222222;
-  color: #333;
-  font-family: 'Merriweather', serif;
-  line-height: 1.6;
+.noticias-hero h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
-.container {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 20px;
+.noticias-hero p {
+    font-size: 1.15rem;
+    opacity: 0.95;
 }
 
-/* Header styles */
-.header {
-  margin-bottom: 25px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #e0e0e0;
+.noticias-lista {
+    background: #f8f9fa;
+    padding: 50px 0;
 }
 
-.header h1 {
-  color: #0066cc; /* Azul característico do CPS */
-  font-size: 1.8rem;
-  margin-bottom: 5px;
+.noticias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 30px;
 }
 
-.header .data {
-  color: #666;
-  font-size: 0.9rem;
-  font-style: italic;
-}
-
-/* Card de notícia */
-.card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  margin-bottom: 25px;
-}
-
-.imagem-noticia {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.conteudo {
-  padding: 20px;
-}
-
-/* noticias.css */
-.titulo {
-  font-size: var(--fonte-normal); /* Herda do global */
-}
-
-.titulo {
-  color: #0066cc;
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-  line-height: 1.3;
-}
-
-.descricao {
-  color: #444;
-  margin-bottom: 20px;
-  font-size: 1rem;
-}
-
-/* Botão VER MAIS */
-.botao {
-  background-color: #0066cc;
-  padding: 12px;
-  text-align: center;
-  transition: background-color 0.3s;
-}
-
-.botao:hover {
-  background-color: #0052a3;
-}
-
-.botao a {
-  color: white !important;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
-}
-
-/* Responsividade */
-@media (min-width: 768px) {
-  .container {
-    max-width: 700px;
-    padding: 30px 20px;
-  }
-  
-  .header h1 {
-    font-size: 2.2rem;
-  }
-  
-  .titulo {
-    font-size: 1.6rem;
-  }
-  
-  .descricao {
-    font-size: 1.1rem;
-  }
-  
-  .botao {
-    padding: 15px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 900px;
-  }
-  
-  .card {
+.noticia-card {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(102, 126, 234, 0.06);
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
     display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .imagem-noticia {
-    width: 40%;
-    height: 300px;
-    object-fit: cover;
-  }
-  
-  .conteudo {
-    width: 60%;
-    padding: 30px;
-  }
-  
-  .botao {
+    flex-direction: column;
+}
+
+.noticia-card:hover {
+    box-shadow: 0 20px 50px rgba(102, 126, 234, 0.18);
+    transform: translateY(-8px);
+}
+
+.noticia-card img {
     width: 100%;
-  }
+    height: 190px;
+    object-fit: cover;
 }
 
-/* Efeitos e acessibilidade */
-.botao:focus-within {
-  outline: 2px solid #003366;
-  outline-offset: 2px;
+.noticia-content {
+    padding: 25px 18px 22px 18px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.card {
-  transition: transform 0.3s, box-shadow 0.3s;
+.noticia-content h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    font-weight: 700;
+    margin-bottom: 7px;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+.noticia-data {
+    font-size: 0.92rem;
+    color: #764ba2;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.noticia-content p {
+    color: #718096;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.btn-noticia {
+    align-self: flex-start;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s, box-shadow 0.3s;
+    box-shadow: 0 3px 12px rgba(102, 126, 234, 0.12);
+}
+
+.btn-noticia:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 9px 24px rgba(102, 126, 234, 0.23);
+}
+
+@media (max-width: 768px) {
+    .noticias-hero h2 {
+        font-size: 1.7rem;
+    }
+    .noticias-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .noticia-card img {
+        height: 140px;
+    }
 }

@@ -1,103 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Intelectus+</title>
-  <link rel="stylesheet" href="css/menu.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
-  <div class="font-controls">
-    <button id="font-decrease" aria-label="Diminuir tamanho da fonte" title="Diminuir tamanho da fonte">A-</button>
-    <button id="font-reset" aria-label="Tamanho original da fonte" title="Tamanho original da fonte">A</button>
-    <button id="font-increase" aria-label="Aumentar tamanho da fonte" title="Aumentar tamanho da fonte">A+</button>
-
-  <div class="accessibility-tools">
-  <!-- Botão de Inversão de Cores -->
-    <button id="invert-colors" aria-label="Inverter cores do site" title="Modo de alto contraste">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4.92993 4.92999L6.33993 6.33999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M17.6599 17.66L19.0699 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4.92993 19.07L6.33993 17.66" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M17.6599 6.33999L19.0699 4.92999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-     </svg>
-    </button>
-  </div>
-  </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Intelectus+</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<div class="container">
-  <div class="header">
-    <div class="logo-circle">
-      <span class="logo-text">I+</span>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1>Intelectus<span>+</span></h1></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="menu.html" class="active">Home</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button id="decrease-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A-</span></button>
+                <button id="normal-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A</span></button>
+                <button id="increase-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A+</span></button>
+                <button id="toggle-contrast" class="accessibility-btn"><i class="fas fa-adjust"></i></button>
+                <div vw class="enabled"><div vw-access-button class="active"></div></div>
+            </div>
+        </div>
     </div>
-    <div class="welcome-text">
-      <a href="#" class="brand">Intelectus+</a>
-      <p>Olá User<br><strong>Seja bem vindo</strong></p>
-    </div>
-    <div class="user-icon">
-      <img src="images/v4_19.png" alt="User">
-    </div>
-  </div>
 
-  <div class="menu">
-    <div class="menu-item">
-      <a href="cursos.html">
-        <img src="images/v3_43.png" alt="Cursos">
-      </a>
-      <button>
-        <a href="cursos.html" style="color: inherit; text-decoration: none; outline: none;">Cursos</a>
-      </button>
-    </div>
-    <div class="menu-item">
-      <a href="noticias.html">
-        <img src="images/v3_52.png" alt="Notícias">
-      </a>
-      <button>
-        <a href="noticias.html" style="color: inherit; text-decoration: none; outline: none;">Noticias</a>
-      </button>
-    </div>
-    <div class="menu-item">
-      <a href="contato.html">
-        <img src="images/v3_56.png" alt="Contato">
-      </a>
-      <button>
-        <a href="contato.html" style="color: inherit; text-decoration: none; outline: none;">Contato</a>
-      </button>
-    </div>
-  </div>
+    <!-- Hero Banner -->
+    <section class="menu-hero">
+        <div class="container">
+            <div class="menu-hero-content">
+                <h2>Bem-vindo ao Intelectus+</h2>
+                <p>Sua plataforma inovadora para cursos online com acessibilidade e recursos modernos.</p>
+                <a href="cursos.html" class="btn-menu-hero">Ver Cursos</a>
+            </div>
+        </div>
+    </section>
 
-  <div class="actions">
-    <button class="login-button">
-      <a href="login.html" style="color: inherit; text-decoration: none; outline: none;">Login</a>
-    </button>
-    <p class="signup">Não tem conta? <a href="cadastro.html">Criar conta</a></p>
-  </div>
-</div>
+    <!-- Destaques -->
+    <section class="menu-destaques">
+        <div class="container">
+            <h3>Destaques da Plataforma</h3>
+            <div class="destaques-grid">
+                <div class="destaque-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4>Variedade de Cursos</h4>
+                    <p>Do básico ao avançado em tecnologia, design e negócios.</p>
+                </div>
+                <div class="destaque-card">
+                    <i class="fas fa-universal-access"></i>
+                    <h4>Acessibilidade</h4>
+                    <p>Recursos para todos: VLibras, alto contraste, controle de fonte.</p>
+                </div>
+                <div class="destaque-card">
+                    <i class="fas fa-star"></i>
+                    <h4>Qualidade & Avaliações</h4>
+                    <p>Conteúdos selecionados e bem avaliados por milhares de alunos.</p>
+                </div>
+                <div class="destaque-card">
+                    <i class="fas fa-user-plus"></i>
+                    <h4>Cadastre-se</h4>
+                    <p>Crie sua conta grátis e comece a aprender hoje mesmo!</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 15L12 8L19 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
+    <!-- Footer + Topo -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Intelectus<span>+</span></h3>
+                    <p>Sua plataforma de cursos online para desenvolvimento profissional e pessoal.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="menu.html">Home</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Parys-boop+. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-<script src="js/acessibilidade.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="js/global.js"></script>
+    <script src="js/menu.js"></script>
 </body>
 </html>

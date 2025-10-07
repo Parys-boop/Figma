@@ -1,75 +1,130 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notícia - Centro Paula Souza</title>
-  <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet" />
-  <link href="css/noticias.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/global.css">
-
-  <div class="font-controls">
-    <button id="font-decrease" aria-label="Diminuir tamanho da fonte" title="Diminuir tamanho da fonte">A-</button>
-    <button id="font-reset" aria-label="Tamanho original da fonte" title="Tamanho original da fonte">A</button>
-    <button id="font-increase" aria-label="Aumentar tamanho da fonte" title="Aumentar tamanho da fonte">A+</button>
-  </div>
-  <div class="accessibility-tools">
-  <!-- Botão de Inversão de Cores -->
-    <button id="invert-colors" aria-label="Inverter cores do site" title="Modo de alto contraste">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4.92993 4.92999L6.33993 6.33999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M17.6599 17.66L19.0699 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4.92993 19.07L6.33993 17.66" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M17.6599 6.33999L19.0699 4.92999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-     </svg>
-    </button>
-  </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias - Intelectus+</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/noticias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
+    <!-- Header -->
     <header class="header">
-      <h1>Centro Paula Souza</h1>
-      <p class="data">Atualizado até 14/05</p>
+        <div class="container">
+            <div class="logo"><h1>Intelectus<span>+</span></h1></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="menu.html">Home</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="noticias.html" class="active">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="login.html" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <div class="card">
-      <img src="images/v22_87.png" alt="Imagem da notícia" class="imagem-noticia" />
-      <div class="conteudo">
-        <h2 class="titulo">Prorrogado prazo para pedir redução da taxa do Vestibulinho das Etecs</h2>
-        <p class="descricao">
-          Candidato pode solicitar até sexta-feira (16) desconto de 50% na taxa de inscrição
-          para o processo seletivo das Etecs para o segundo semestre; valor integral é de R$ 30
-        </p>
-      </div>
-      <div class="botao">
-        <a href="https://www.cps.sp.gov.br/" style="color: inherit; outline: none;">VER MAIS</a>
-      </div>
+    <!-- Barra de Acessibilidade -->
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button id="decrease-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A-</span></button>
+                <button id="normal-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A</span></button>
+                <button id="increase-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A+</span></button>
+                <button id="toggle-contrast" class="accessibility-btn"><i class="fas fa-adjust"></i></button>
+                <div vw class="enabled"><div vw-access-button class="active"></div></div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 15L12 8L19 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
+    <!-- Hero Notícias -->
+    <section class="noticias-hero">
+        <div class="container">
+            <h2>Últimas Notícias sobre Educação e Tecnologia</h2>
+            <p>Fique por dentro das novidades do mundo dos cursos online!</p>
+        </div>
+    </section>
 
+    <!-- Grid de Notícias -->
+    <section class="noticias-lista">
+        <div class="container">
+            <div class="noticias-grid">
 
-  <div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-  <script src="js/acessibilidade.js"></script>
+                <!-- Notícia 1 -->
+                <article class="noticia-card">
+                    <img src="images/noticia1.jpg" alt="Imagem notícia 1" onerror="this.src='https://via.placeholder.com/400x230/667eea/fff?text=Notícia+1'">
+                    <div class="noticia-content">
+                        <h3>Plataformas de Cursos Online Crescem 35% em 2025</h3>
+                        <span class="noticia-data">06/10/2025</span>
+                        <p>Segundo pesquisas, o ensino online segue em alta, com novas oportunidades para estudantes e instrutores em todo o Brasil.</p>
+                        <a href="#" class="btn-noticia">Leia mais</a>
+                    </div>
+                </article>
+
+                <!-- Notícia 2 -->
+                <article class="noticia-card">
+                    <img src="images/noticia2.jpg" alt="Imagem notícia 2" onerror="this.src='https://via.placeholder.com/400x230/764ba2/fff?text=Notícia+2'">
+                    <div class="noticia-content">
+                        <h3>Inteligência Artificial Revoluciona Educação a Distância</h3>
+                        <span class="noticia-data">05/10/2025</span>
+                        <p>Ferramentas de IA personalizam o aprendizado e aumentam o engajamento dos alunos nas plataformas digitais.</p>
+                        <a href="#" class="btn-noticia">Leia mais</a>
+                    </div>
+                </article>
+
+                <!-- Notícia 3 -->
+                <article class="noticia-card">
+                    <img src="images/noticia3.jpg" alt="Imagem notícia 3" onerror="this.src='https://via.placeholder.com/400x230/667eea/fff?text=Notícia+3'">
+                    <div class="noticia-content">
+                        <h3>Novos Cursos Gratuitos Disponíveis!</h3>
+                        <span class="noticia-data">02/10/2025</span>
+                        <p>Intelectus+ lança trilhas de formação gratuitas para iniciantes em programação, design e negócios.</p>
+                        <a href="#" class="btn-noticia">Leia mais</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer + Botão topo -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Intelectus<span>+</span></h3>
+                    <p>Sua plataforma de cursos online para desenvolvimento profissional e pessoal.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="menu.html">Home</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Parys-boop+. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="js/global.js"></script>
+    <script src="js/noticias.js"></script>
 </body>
 </html>

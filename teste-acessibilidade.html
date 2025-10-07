@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Acessibilidade</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            padding: 50px;
+        }
+        .teste-area {
+            background: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success { background: #d4edda; color: #155724; }
+        .info { background: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h1>Teste de Funcionalidades de Acessibilidade</h1>
+    
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button id="decrease-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A-</span></button>
+                <button id="normal-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A</span></button>
+                <button id="increase-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A+</span></button>
+                <button id="toggle-contrast" class="accessibility-btn">Alto Contraste</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="teste-area">
+        <h2>Instruções de Teste:</h2>
+        <div class="status info">
+            <p><strong>1. Teste os botões de fonte:</strong> Clique em A-, A, A+ e observe a mudança no tamanho do texto.</p>
+        </div>
+        <div class="status info">
+            <p><strong>2. Teste o alto contraste:</strong> Clique no botão "Alto Contraste" e veja as cores mudarem.</p>
+        </div>
+        <div class="status info">
+            <p><strong>3. Teste os atalhos de teclado:</strong></p>
+            <ul>
+                <li>Pressione <code>Alt + Shift + C</code> para alternar o contraste</li>
+                <li>Pressione <code>Alt + Shift + F</code> para ciclar entre os tamanhos de fonte</li>
+            </ul>
+        </div>
+        <div class="status info">
+            <p><strong>4. Teste a persistência:</strong> Altere as configurações, recarregue a página (F5) e veja se as preferências foram mantidas.</p>
+        </div>
+        <div class="status success">
+            <p>✅ Se você conseguir fazer tudo acima, a acessibilidade está funcionando!</p>
+        </div>
+    </div>
+
+    <div class="teste-area">
+        <h2>Texto de Exemplo</h2>
+        <p>Este é um parágrafo de exemplo para você testar o tamanho da fonte e o alto contraste.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <button class="accessibility-btn">Botão de Teste</button>
+    </div>
+
+    <button id="back-to-top" class="back-to-top">↑</button>
+
+    <script>
+        // Script para verificar se o global.js está carregando
+        console.log('Página carregada');
+        
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('DOM Carregado');
+            console.log('Botão decrease-font encontrado:', document.getElementById('decrease-font'));
+            console.log('Botão toggle-contrast encontrado:', document.getElementById('toggle-contrast'));
+        });
+    </script>
+    <script src="js/global.js"></script>
+</body>
+</html>

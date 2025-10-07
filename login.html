@@ -1,76 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="css/login.css">
-  <link rel="stylesheet" href="css/global.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-
-  <div class="font-controls">
-    <button id="font-decrease" aria-label="Diminuir tamanho da fonte" title="Diminuir tamanho da fonte">A-</button>
-    <button id="font-reset" aria-label="Tamanho original da fonte" title="Tamanho original da fonte">A</button>
-    <button id="font-increase" aria-label="Aumentar tamanho da fonte" title="Aumentar tamanho da fonte">A+</button>
-  </div>
-
-  <div class="accessibility-tools">
-  <!-- Botão de Inversão de Cores -->
-    <button id="invert-colors" aria-label="Inverter cores do site" title="Modo de alto contraste">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" stroke="currentColor" stroke-width="2"/>
-        <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4.92993 4.92999L6.33993 6.33999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M17.6599 17.66L19.0699 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M4.92993 19.07L6.33993 17.66" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        <path d="M17.6599 6.33999L19.0699 4.92999" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-     </svg>
-    </button>
-  </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Intelectus+</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-
 <body>
-  <div class="login-container">
-    <div class="avatar" style="text-align: center;">
-      <span>👤</span>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><h1>Intelectus<span>+</span></h1></div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="menu.html">Home</a></li>
+                    <li><a href="cursos.html">Cursos</a></li>
+                    <li><a href="noticias.html">Notícias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="login.html" class="active btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="accessibility-bar">
+        <div class="container">
+            <div class="accessibility-controls">
+                <button id="decrease-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A-</span></button>
+                <button id="normal-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A</span></button>
+                <button id="increase-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A+</span></button>
+                <button id="toggle-contrast" class="accessibility-btn"><i class="fas fa-adjust"></i></button>
+                <div vw class="enabled"><div vw-access-button class="active"></div></div>
+            </div>
+        </div>
     </div>
 
-    <form class="login-form">
-      <label for="username">Nome de usuário:</label>
-      <input type="text" id="username" name="username">
+    <section class="login-section">
+        <div class="container">
+            <div class="login-card">
+                <h2>Entrar na Intelectus+</h2>
+                <form class="login-form" autocomplete="off">
+                    <div class="input-group">
+                        <label for="login-email">E-mail</label>
+                        <input type="email" id="login-email" name="email" required autocomplete="username">
+                    </div>
+                    <div class="input-group">
+                        <label for="login-password">Senha</label>
+                        <input type="password" id="login-password" name="password" required autocomplete="current-password">
+                    </div>
+                    <button type="submit" class="btn-login-form">Entrar</button>
+                </form>
+                <div class="login-links">
+                    <a href="#">Esqueceu a senha?</a>
+                    <span> | </span>
+                    <a href="cadastro.html">Criar conta</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <label for="password">Senha:</label>
-      <input type="password" id="password" name="password">
-
-      <button type="submit">CADASTRAR</button>
-    </form>
-
-    <p class="forgot-password">Esqueceu a senha?</p>
-  </div>
-
-  <button id="back-to-top" aria-label="Voltar ao topo" title="Voltar ao topo">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M5 15L12 8L19 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
-
-
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-      <div class="vw-plugin-top-wrapper"></div>
-    </div>
-  </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-  </script>
-  <script src="js/acessibilidade.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Intelectus<span>+</span></h3>
+                    <p>Sua plataforma de cursos online para desenvolvimento profissional e pessoal.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="menu.html">Home</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="noticias.html">Notícias</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Parys-boop+. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <button id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script src="js/global.js"></script>
+    <script src="js/login.js"></script>
 </body>
-
 </html>
