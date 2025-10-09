@@ -33,15 +33,31 @@
         </div>
     </header>
 
-    <!-- Barra de Acessibilidade -->
     <div class="accessibility-bar">
         <div class="container">
             <div class="accessibility-controls">
-                <button id="decrease-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A-</span></button>
-                <button id="normal-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A</span></button>
-                <button id="increase-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A+</span></button>
-                <button id="toggle-contrast" class="accessibility-btn"><i class="fas fa-adjust"></i></button>
-                <div vw class="enabled"><div vw-access-button class="active"></div></div>
+                <!-- Botões de Fonte -->
+                <button id="decrease-font" class="accessibility-btn" title="Diminuir fonte">
+                    <i class="fas fa-font"></i><span>A-</span>
+                </button>
+                <button id="normal-font" class="accessibility-btn" title="Fonte normal">
+                    <i class="fas fa-font"></i><span>A</span>
+                </button>
+                <button id="increase-font" class="accessibility-btn" title="Aumentar fonte">
+                    <i class="fas fa-font"></i><span>A+</span>
+                </button>
+                
+                <!-- Botão Alto Contraste -->
+                <button id="toggle-contrast" class="accessibility-btn" title="Alto contraste">
+                    <i class="fas fa-adjust"></i><span>Contraste</span>
+                </button>
+
+                <div vw class="enabled">
+                    <div vw-access-button class="active"></div>
+                        <div vw-plugin-wrapper>
+                        <div class="vw-plugin-top-wrapper"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -196,15 +212,5 @@
     <!-- Scripts -->
     <script src="js/global.js"></script>
     <script src="js/contato.js"></script>
-    
-    <!-- VLibras -->
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        window.addEventListener('load', function() {
-            if (typeof VLibras !== 'undefined') {
-                new window.VLibras.Widget('https://vlibras.gov.br/app');
-            }
-        });
-    </script>
 </body>
 </html>

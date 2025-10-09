@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notícias - Intelectus+</title>
+    <title>Notícias FATEC - Intelectus+</title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/noticias.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -47,346 +47,93 @@
                     <i class="fas fa-font"></i><span>A+</span>
                 </button>
                 <button id="toggle-contrast" class="accessibility-btn" title="Alto contraste">
-                    <i class="fas fa-adjust"></i>
+                    <i class="fas fa-adjust"></i><span>Contraste</span>
                 </button>
-                <div vw class="enabled">
-                    <div vw-access-button class="active"></div>
-                </div>
             </div>
         </div>
     </div>
 
-    <!-- SCARCITY BANNER: Urgência para webinar -->
-    <div class="scarcity-banner">
-        <div class="container">
-            <p><i class="fas fa-video"></i> <strong>Webinar Gratuito HOJE:</strong> "Como conseguir seu primeiro emprego em Tech" às <span class="countdown">19:00h</span> | <strong>Restam 45 vagas!</strong> <a href="#" class="banner-cta">Inscreva-se Já</a></p>
+    <!-- Widget VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
 
-    <!-- Hero Section com VISUAL HIERARCHY -->
-    <section class="hero-section">
+    <!-- Hero Section FATEC -->
+    <section class="fatec-hero">
         <div class="container">
             <div class="hero-content">
-                <!-- VISUAL HIERARCHY: Título principal -->
-                <h2 class="hero-title">Notícias e Atualizações</h2>
-                <p class="hero-subtitle">Fique por dentro das últimas novidades do mundo da tecnologia, educação e desenvolvimento profissional</p>
-                
-                <!-- SOCIAL PROOF: Estatísticas de engagement -->
-                <div class="hero-stats">
-                    <div class="stat-badge">
-                        <i class="fas fa-newspaper"></i>
-                        <span><strong>250+</strong> Artigos</span>
+                <div class="hero-logo">
+                    <div class="logo-box">
+                        <h2>Fatec Jales</h2>
                     </div>
-                    <div class="stat-badge">
-                        <i class="fas fa-eye"></i>
-                        <span><strong>50K+</strong> Leitores/mês</span>
-                    </div>
-                    <div class="stat-badge">
-                        <i class="fas fa-clock"></i>
-                        <span>Atualizado <strong>Diariamente</strong></span>
-                    </div>
+                    <p class="update-date">Atualizado até <strong id="current-date">09/10/2025</strong></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Filtros de Categorias -->
-    <section class="filters-section">
-        <div class="container">
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-th"></i> Todas
-                </button>
-                <button class="filter-btn" data-filter="tecnologia">
-                    <i class="fas fa-laptop-code"></i> Tecnologia
-                </button>
-                <button class="filter-btn" data-filter="carreira">
-                    <i class="fas fa-briefcase"></i> Carreira
-                </button>
-                <button class="filter-btn" data-filter="educacao">
-                    <i class="fas fa-graduation-cap"></i> Educação
-                </button>
-                <button class="filter-btn" data-filter="eventos">
-                    <i class="fas fa-calendar-alt"></i> Eventos
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Notícias -->
+    <!-- Seção de Notícias FATEC -->
     <section class="news-section">
         <div class="container">
-            <!-- VISUAL HIERARCHY: Título da seção -->
-            <div class="section-header">
-                <h3 class="section-title">Últimas Notícias</h3>
-                <p class="section-subtitle">Confira as novidades mais recentes</p>
-            </div>
+            
 
-            <!-- Grid de Notícias -->
-            <div class="news-grid">
-                
-                <!-- Notícia Destaque 1 - SCARCITY + REWARDS -->
-                <article class="news-card featured" data-category="tecnologia">
-                    <div class="news-image">
-                        <img src="images/news-ai.jpg" alt="IA no Mercado" onerror="this.src='https://via.placeholder.com/800x450/667eea/ffffff?text=IA+2025'">
-                        <div class="news-badge trending">🔥 Em Alta</div>
-                        <!-- SCARCITY: Tempo limitado -->
-                        <div class="news-time-badge">📅 Publicado há 2h</div>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-category tech">
-                                <i class="fas fa-laptop-code"></i> Tecnologia
-                            </span>
-                            <span class="news-date">
-                                <i class="fas fa-calendar"></i> 09 Out 2025
-                            </span>
-                        </div>
-                        
-                        <h3 class="news-title">Inteligência Artificial: As 10 Profissões Mais Demandadas em 2025</h3>
-                        <p class="news-excerpt">Descubra quais são as carreiras mais promissoras na era da IA e como você pode se preparar para conquistar essas oportunidades no mercado...</p>
-                        
-                        <!-- SOCIAL PROOF: Engajamento -->
-                        <div class="news-engagement">
-                            <span class="engagement-item">
-                                <i class="fas fa-eye"></i> 3.240 visualizações
-                            </span>
-                            <span class="engagement-item">
-                                <i class="fas fa-comment"></i> 89 comentários
-                            </span>
-                            <span class="engagement-item">
-                                <i class="fas fa-heart"></i> 542 curtidas
-                            </span>
-                        </div>
-
-                        <!-- REWARDS: Bônus ao ler -->
-                        <div class="news-reward">
-                            <i class="fas fa-gift"></i> Leia e ganhe <strong>E-book gratuito</strong> sobre IA
-                        </div>
-
-                        <!-- CALL TO ACTION -->
-                        <a href="#" class="btn-read-more">
-                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Notícia 2 -->
-                <article class="news-card" data-category="carreira">
-                    <div class="news-image">
-                        <img src="images/news-carreira.jpg" alt="Dicas de Carreira" onerror="this.src='https://via.placeholder.com/600x350/764ba2/ffffff?text=Carreira'">
-                        <div class="news-badge new">✨ Novo</div>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-category career">
-                                <i class="fas fa-briefcase"></i> Carreira
-                            </span>
-                            <span class="news-date">
-                                <i class="fas fa-calendar"></i> 08 Out 2025
-                            </span>
-                        </div>
-                        
-                        <h3 class="news-title">Como Construir um Portfólio Profissional que Impressiona</h3>
-                        <p class="news-excerpt">Aprenda as melhores práticas para criar um portfólio que destaque suas habilidades e atraia recrutadores...</p>
-                        
-                        <div class="news-engagement">
-                            <span class="engagement-item">
-                                <i class="fas fa-eye"></i> 1.890 visualizações
-                            </span>
-                            <span class="engagement-item">
-                                <i class="fas fa-comment"></i> 45 comentários
-                            </span>
-                        </div>
-
-                        <div class="news-reward">
-                            <i class="fas fa-download"></i> <strong>Template de portfólio</strong> grátis
-                        </div>
-
-                        <a href="#" class="btn-read-more">
-                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Notícia 3 - SCARCITY -->
-                <article class="news-card" data-category="eventos">
-                    <div class="news-image">
-                        <img src="images/news-evento.jpg" alt="Evento Tech" onerror="this.src='https://via.placeholder.com/600x350/667eea/ffffff?text=Evento+Tech'">
-                        <div class="news-badge event">📅 Evento</div>
-                        <!-- SCARCITY: Vagas limitadas -->
-                        <div class="news-spots-badge">⚡ Últimas 20 vagas!</div>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-category event">
-                                <i class="fas fa-calendar-alt"></i> Eventos
-                            </span>
-                            <span class="news-date">
-                                <i class="fas fa-calendar"></i> 07 Out 2025
-                            </span>
-                        </div>
-                        
-                        <h3 class="news-title">TechConf 2025: O Maior Evento de Tecnologia do Brasil</h3>
-                        <p class="news-excerpt">Participe do evento que reunirá os maiores especialistas em tecnologia do país. Palestras, workshops e networking...</p>
-                        
-                        <div class="news-engagement">
-                            <span class="engagement-item">
-                                <i class="fas fa-users"></i> 2.340 inscritos
-                            </span>
-                            <span class="engagement-item">
-                                <i class="fas fa-star"></i> 4.9/5.0
-                            </span>
-                        </div>
-
-                        <div class="news-reward">
-                            <i class="fas fa-ticket-alt"></i> <strong>15% OFF</strong> com código INTELECTUS
-                        </div>
-
-                        <a href="#" class="btn-read-more cta-event">
-                            <i class="fas fa-ticket-alt"></i> Garantir Minha Vaga
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Notícia 4 -->
-                <article class="news-card" data-category="educacao">
-                    <div class="news-image">
-                        <img src="images/news-estudo.jpg" alt="Técnicas de Estudo" onerror="this.src='https://via.placeholder.com/600x350/764ba2/ffffff?text=Educação'">
-                        <div class="news-badge">📚 Educação</div>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-category education">
-                                <i class="fas fa-graduation-cap"></i> Educação
-                            </span>
-                            <span class="news-date">
-                                <i class="fas fa-calendar"></i> 06 Out 2025
-                            </span>
-                        </div>
-                        
-                        <h3 class="news-title">7 Técnicas Cientificamente Comprovadas para Estudar Melhor</h3>
-                        <p class="news-excerpt">Descubra métodos validados pela ciência que vão turbinar seus estudos e otimizar seu aprendizado...</p>
-                        
-                        <div class="news-engagement">
-                            <span class="engagement-item">
-                                <i class="fas fa-eye"></i> 5.120 visualizações
-                            </span>
-                            <span class="engagement-item">
-                                <i class="fas fa-comment"></i> 128 comentários
-                            </span>
-                        </div>
-
-                        <div class="news-reward">
-                            <i class="fas fa-file-pdf"></i> <strong>Guia PDF</strong> de técnicas de estudo
-                        </div>
-
-                        <a href="#" class="btn-read-more">
-                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Notícia 5 -->
-                <article class="news-card" data-category="tecnologia">
-                    <div class="news-image">
-                        <img src="images/news-python.jpg" alt="Python 2025" onerror="this.src='https://via.placeholder.com/600x350/667eea/ffffff?text=Python+2025'">
-                        <div class="news-badge trending">🔥 Popular</div>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-category tech">
-                                <i class="fas fa-laptop-code"></i> Tecnologia
-                            </span>
-                            <span class="news-date">
-                                <i class="fas fa-calendar"></i> 05 Out 2025
-                            </span>
-                        </div>
-                        
-                        <h3 class="news-title">Python Continua Sendo a Linguagem Mais Demandada do Mercado</h3>
-                        <p class="news-excerpt">Pesquisa revela que Python lidera ranking de linguagens mais procuradas por empresas em 2025...</p>
-                        
-                        <div class="news-engagement">
-                            <span class="engagement-item">
-                                <i class="fas fa-eye"></i> 4.560 visualizações
-                            </span>
-                            <span class="engagement-item">
-                                <i class="fas fa-heart"></i> 789 curtidas
-                            </span>
-                        </div>
-
-                        <div class="news-reward">
-                            <i class="fas fa-code"></i> <strong>Curso introdutório</strong> grátis de Python
-                        </div>
-
-                        <a href="#" class="btn-read-more">
-                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Notícia 6 -->
-                <article class="news-card" data-category="carreira">
-                    <div class="news-image">
-                        <img src="images/news-remoto.jpg" alt="Trabalho Remoto" onerror="this.src='https://via.placeholder.com/600x350/764ba2/ffffff?text=Trabalho+Remoto'">
-                        <div class="news-badge">💼 Carreira</div>
-                    </div>
-                    <div class="news-content">
-                        <div class="news-meta">
-                            <span class="news-category career">
-                                <i class="fas fa-briefcase"></i> Carreira
-                            </span>
-                            <span class="news-date">
-                                <i class="fas fa-calendar"></i> 04 Oct 2025
-                            </span>
-                        </div>
-                        
-                        <h3 class="news-title">Trabalho Remoto: Empresas que Mais Contratam no Brasil</h3>
-                        <p class="news-excerpt">Lista completa das empresas brasileiras e internacionais que oferecem oportunidades remotas em tecnologia...</p>
-                        
-                        <div class="news-engagement">
-                            <span class="engagement-item">
-                                <i class="fas fa-eye"></i> 6.780 visualizações
-                            </span>
-                            <span class="engagement-item">
-                                <i class="fas fa-comment"></i> 234 comentários
-                            </span>
-                        </div>
-
-                        <div class="news-reward">
-                            <i class="fas fa-list"></i> <strong>Lista exclusiva</strong> de 50+ empresas
-                        </div>
-
-                        <a href="#" class="btn-read-more">
-                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
-                        </a>
-                    </div>
-                </article>
-
-            </div>
-
-            <!-- CALL TO ACTION: Newsletter -->
-            <div class="newsletter-section">
-                <div class="newsletter-content">
-                    <div class="newsletter-icon">
-                        <i class="fas fa-envelope-open-text"></i>
-                    </div>
-                    <div class="newsletter-text">
-                        <h3>📬 Receba Notícias Exclusivas por E-mail</h3>
-                        <p>Cadastre-se e receba semanalmente as melhores notícias, dicas e oportunidades direto na sua caixa de entrada!</p>
-                    </div>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Seu melhor e-mail" required>
-                        <button type="submit" class="btn-newsletter">
-                            <i class="fas fa-paper-plane"></i> Inscrever-se Grátis
-                        </button>
-                    </form>
-                    <!-- REWARDS -->
-                    <div class="newsletter-reward">
-                        <i class="fas fa-gift"></i> <strong>Bônus:</strong> E-book "10 Tendências Tech 2025" ao se cadastrar!
-                    </div>
+            <article class="news-card fatec-card">
+                <div class="news-image">
+                    <img src="./imagens/visita-tecnica-porto-santos-02.jpg" alt="Imagens noticia Visia técnica">
                 </div>
+                <div class="news-content">
+                    <h3 class="news-title">Porto de Santos e Dow Química: locais de estudo para a Fatec Jales</h3>
+                    <p class="news-excerpt">
+                        O Porto de Santos, um dos principais da América Latina, e a multinacional Dow Química, unidade localizada em Guarujá, tornaram-se, mais uma vez, locais valiosos de estudo para a Fatec Jales. Nos dias 3, 4 e 5 de outubro, estudantes, docentes e coordenadores de curso participaram de uma experiência inesquecível, que uniu conhecimento técnico multidisciplinar, cultura e entretenimento.
+                    </p>
+                    <a href="https://www.fatecjales.edu.br/" target="_blank" class="btn-fatec">
+                        VER MAIS
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="news-card fatec-card">
+                <div class="news-image">
+                    <img src="./imagens/oficina-curriculo-linkedin.jpg" alt="Oficia de curriculo">
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">Oficina aborda currículo e LinkedIn</h3>
+                    <p class="news-excerpt">
+                        Um tema de interesse de todo estudante de ensino superior é o ingresso no mercado de trabalho. Com o objetivo de contribuir para essa inserção, a Prof.ª Dr.ª Adriana de Souza Colombo conduziu uma oficina sobre elaboração de currículo e como criar um bom perfil no LinkedIn, no dia 2 de outubro.
+                    </p>
+                    <a href="https://www.fatecjales.edu.br/" target="_blank" class="btn-fatec">
+                        VER MAIS
+                    </a>
+                </div>
+            </article>
+
+
+            <article class="news-card fatec-card">
+                <div class="news-image">
+                    <img src="./imagens/feteps-2025.jpg" alt="Imagem com o Thiaguinho">
+                </div>
+                <div class="news-content">
+                    <h3 class="news-title">Fatec presente na Feira Tecnológica do CPS</h3>
+                    <p class="news-excerpt">
+                       O maior evento de inovação, criatividade e empreendedorismo estudantil do estado de São Paulo contou com a presença da Fatec Jales, por intermédio do diretor, Prof. Me. Tiago Ribeiro Carneiro.
+                    </p>
+                    <a href="https://www.fatecjales.edu.br/" target="_blank" class="btn-fatec">
+                        VER MAIS
+                    </a>
+                </div>
+            </article>
+
+            <!-- Link para todas as notícias -->
+            <div class="all-news-link">
+                <a href="https://www.fatecjales.edu.br/" target="_blank" class="btn-all-news">
+                    <i class="fas fa-newspaper"></i> Ver Todas as Notícias no Site Oficial da FATEC
+                </a>
             </div>
+
         </div>
     </section>
 
@@ -397,7 +144,6 @@
                 <div class="footer-section">
                     <h3>Intelectus<span>+</span></h3>
                     <p>Sua plataforma de cursos online para desenvolvimento profissional e pessoal.</p>
-                    <!-- REWARDS: Destaque de benefício -->
                     <div class="footer-reward">
                         <i class="fas fa-gift"></i>
                         <span>Cadastre-se e ganhe 10 cursos grátis!</span>
@@ -429,15 +175,5 @@
     <!-- Scripts -->
     <script src="js/global.js"></script>
     <script src="js/noticias.js"></script>
-    
-    <!-- VLibras -->
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        window.addEventListener('load', function() {
-            if (typeof VLibras !== 'undefined') {
-                new window.VLibras.Widget('https://vlibras.gov.br/app');
-            }
-        });
-    </script>
 </body>
 </html>

@@ -33,10 +33,10 @@
         </div>
     </header>
 
-    <!-- Barra de Acessibilidade -->
     <div class="accessibility-bar">
         <div class="container">
             <div class="accessibility-controls">
+                <!-- Botões de Fonte -->
                 <button id="decrease-font" class="accessibility-btn" title="Diminuir fonte">
                     <i class="fas fa-font"></i><span>A-</span>
                 </button>
@@ -46,11 +46,17 @@
                 <button id="increase-font" class="accessibility-btn" title="Aumentar fonte">
                     <i class="fas fa-font"></i><span>A+</span>
                 </button>
+                
+                <!-- Botão Alto Contraste -->
                 <button id="toggle-contrast" class="accessibility-btn" title="Alto contraste">
-                    <i class="fas fa-adjust"></i>
+                    <i class="fas fa-adjust"></i><span>Contraste</span>
                 </button>
+
                 <div vw class="enabled">
                     <div vw-access-button class="active"></div>
+                        <div vw-plugin-wrapper>
+                        <div class="vw-plugin-top-wrapper"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -130,9 +136,6 @@
                 <!-- Curso 1 - SCARCITY + SOCIAL PROOF + REWARDS -->
                 <div class="course-card" data-category="tecnologia">
                     <div class="course-image">
-                        <img src="images/curso-python.jpg" alt="Curso Python" onerror="this.src='https://via.placeholder.com/400x250/667eea/ffffff?text=Python+Completo'">
-                        <div class="course-badge bestseller">🔥 Bestseller</div>
-                        <!-- SCARCITY: Vagas limitadas -->
                         <div class="course-spots">⚡ Restam 8 vagas</div>
                     </div>
                     <div class="course-content">
@@ -190,7 +193,6 @@
                 <!-- Curso 2 -->
                 <div class="course-card" data-category="design">
                     <div class="course-image">
-                        <img src="images/curso-ux.jpg" alt="Curso UX/UI" onerror="this.src='https://via.placeholder.com/400x250/764ba2/ffffff?text=UX/UI+Design'">
                         <div class="course-badge new">✨ Novo</div>
                         <div class="course-spots hot">🔥 5 vagas apenas!</div>
                     </div>
@@ -245,7 +247,6 @@
                 <!-- Curso 3 -->
                 <div class="course-card" data-category="negocios">
                     <div class="course-image">
-                        <img src="images/curso-marketing.jpg" alt="Curso Marketing Digital" onerror="this.src='https://via.placeholder.com/400x250/667eea/ffffff?text=Marketing+Digital'">
                         <div class="course-badge popular">⭐ Popular</div>
                     </div>
                     <div class="course-content">
@@ -299,7 +300,6 @@
                 <!-- Curso 4 -->
                 <div class="course-card" data-category="tecnologia">
                     <div class="course-image">
-                        <img src="images/curso-javascript.jpg" alt="Curso JavaScript" onerror="this.src='https://via.placeholder.com/400x250/764ba2/ffffff?text=JavaScript+Moderno'">
                         <div class="course-badge bestseller">🔥 Top Rated</div>
                         <div class="course-spots">⚡ 12 vagas restantes</div>
                     </div>
@@ -354,7 +354,6 @@
                 <!-- Curso 5 -->
                 <div class="course-card" data-category="design">
                     <div class="course-image">
-                        <img src="images/curso-adobe.jpg" alt="Curso Adobe" onerror="this.src='https://via.placeholder.com/400x250/667eea/ffffff?text=Adobe+Creative'">
                         <div class="course-badge popular">💎 Premium</div>
                     </div>
                     <div class="course-content">
@@ -408,7 +407,6 @@
                 <!-- Curso 6 -->
                 <div class="course-card" data-category="negocios">
                     <div class="course-image">
-                        <img src="images/curso-excel.jpg" alt="Curso Excel" onerror="this.src='https://via.placeholder.com/400x250/764ba2/ffffff?text=Excel+Avançado'">
                         <div class="course-badge">📊 Profissional</div>
                         <div class="course-spots">⚡ 15 vagas</div>
                     </div>
@@ -517,15 +515,5 @@
     <!-- Scripts -->
     <script src="js/global.js"></script>
     <script src="js/cursos.js"></script>
-    
-    <!-- VLibras -->
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        window.addEventListener('load', function() {
-            if (typeof VLibras !== 'undefined') {
-                new window.VLibras.Widget('https://vlibras.gov.br/app');
-            }
-        });
-    </script>
 </body>
 </html>
