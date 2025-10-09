@@ -537,6 +537,166 @@ body.high-contrast .back-to-top {
     100% { transform: rotate(360deg); }
 }
 
+/* =========== Estilo base do alto contraste ========= */
+body.high-contrast {
+    background: #000 !important;
+    color: #ffff00 !important;
+}
+
+/* Containers e seções */
+body.high-contrast .header,
+body.high-contrast .accessibility-bar,
+body.high-contrast .scarcity-banner,
+body.high-contrast .menu-hero,
+body.high-contrast .menu-destaques,
+body.high-contrast .hero-section,
+body.high-contrast .filters-section,
+body.high-contrast .courses-section,
+body.high-contrast .news-section,
+body.high-contrast .contato-section,
+body.high-contrast .footer {
+    background: #000 !important;
+    color: #ffff00 !important;
+}
+
+/* Textos e títulos */
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast h6,
+body.high-contrast p,
+body.high-contrast span,
+body.high-contrast label,
+body.high-contrast li {
+    color: #ffff00 !important;
+    background: transparent !important;
+}
+
+/* Links */
+body.high-contrast a {
+    color: #00ffff !important;
+    text-decoration: underline !important;
+    background: transparent !important;
+}
+
+body.high-contrast a:hover {
+    color: #ffffff !important;
+}
+
+/* Botões principais */
+body.high-contrast button,
+body.high-contrast .btn-menu-hero,
+body.high-contrast .btn-enroll,
+body.high-contrast .btn-read-more,
+body.high-contrast .btn-contato-form,
+body.high-contrast .btn-newsletter,
+body.high-contrast .btn-cta-courses,
+body.high-contrast .card-cta-btn {
+    background: #ffff00 !important;
+    color: #000 !important;
+    border: 3px solid #ffff00 !important;
+}
+
+body.high-contrast button:hover,
+body.high-contrast .btn-menu-hero:hover {
+    background: #ffffff !important;
+    color: #000 !important;
+    border: 3px solid #ffffff !important;
+}
+
+/* Cards e containers brancos */
+body.high-contrast .destaque-card,
+body.high-contrast .course-card,
+body.high-contrast .news-card,
+body.high-contrast .contato-card,
+body.high-contrast .info-card,
+body.high-contrast .stat-item {
+    background: #000 !important;
+    border: 2px solid #ffff00 !important;
+    box-shadow: 0 0 10px #ffff00 !important;
+}
+
+/* Inputs e formulários */
+body.high-contrast input,
+body.high-contrast textarea,
+body.high-contrast select {
+    background: #000 !important;
+    color: #ffff00 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+body.high-contrast input::placeholder,
+body.high-contrast textarea::placeholder {
+    color: #ffff00 !important;
+    opacity: 0.7;
+}
+
+body.high-contrast input:focus,
+body.high-contrast textarea:focus,
+body.high-contrast select:focus {
+    border-color: #00ffff !important;
+    box-shadow: 0 0 5px #00ffff !important;
+}
+
+/* Ícones */
+body.high-contrast i {
+    color: #00ffff !important;
+}
+
+/* Imagens em escala de cinza */
+body.high-contrast img {
+    filter: grayscale(100%) contrast(150%) brightness(1.2) !important;
+}
+
+/* Badges e tags */
+body.high-contrast .course-badge,
+body.high-contrast .news-badge,
+body.high-contrast .card-social-proof,
+body.high-contrast .card-reward-badge,
+body.high-contrast .card-scarcity-badge,
+body.high-contrast .reward-tag,
+body.high-contrast .contact-bonus,
+body.high-contrast .news-reward {
+    background: #000 !important;
+    color: #ffff00 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+/* Footer */
+body.high-contrast .footer {
+    border-top: 3px solid #ffff00 !important;
+}
+
+body.high-contrast .footer-reward {
+    background: #000 !important;
+    border: 2px solid #00ffff !important;
+}
+
+/* Remover gradientes e sombras */
+body.high-contrast * {
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+/* Botão voltar ao topo */
+body.high-contrast .back-to-top {
+    background: #ffff00 !important;
+    color: #000 !important;
+    border: 3px solid #ffff00 !important;
+}
+
+body.high-contrast .back-to-top:hover {
+    background: #ffffff !important;
+}
+
+/* Remover backgrounds de gradiente */
+body.high-contrast [style*="background: linear-gradient"],
+body.high-contrast [style*="background: radial-gradient"] {
+    background: #000 !important;
+}
+
 /* ========================================
    RESPONSIVIDADE
 ======================================== */

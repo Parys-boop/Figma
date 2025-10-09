@@ -1,59 +1,85 @@
-// GLOBAL.JS - Funcionalidades de Acessibilidade Intelectus+
+// ============================================
+// GLOBAL.JS - Intelectus+
+// Funções de Acessibilidade para TODAS as páginas
+// ============================================
 
-// --- Controle de Tamanho de Fonte ---
-function setFontSize(size) {
-    document.body.classList.remove('font-small', 'font-normal', 'font-large', 'font-extra-large');
-    document.body.classList.add(size);
-    localStorage.setItem('fontSize', size);
+// ========================================
+// CONTROLE DE FONTE
+// ========================================
+let currentFontSize = 16; // Tamanho padrão em px
+
+// Aumentar fonte
+function increaseFontSize() {
+    if (currentFontSize < 24) { // Máximo 24px
+        currentFontSize += 2;
+        applyFontSize();
+        console.log('📈 Fonte aumentada para:', currentFontSize + 'px');
+    }
 }
 
-// --- Alto Contraste ---
+// Diminuir fonte
+function decreaseFontSize() {
+    if (currentFontSize > 12) { // Mínimo 12px
+        currentFontSize -= 2;
+        applyFontSize();
+        console.log('📉 Fonte diminuída para:', currentFontSize + 'px');
+    }
+}
+
+// Restaurar fonte normal
+function normalFontSize() {
+    currentFontSize = 16;
+    applyFontSize();
+    console.log('🔄 Fonte restaurada para:', currentFontSize + 'px');
+}
+
+// Aplicar tamanho de fonte e salvar
+function applyFontSize() {
+    document.documentElement.style.fontSize = currentFontSize + 'px';
+    localStorage.setItem('fontSize', currentFontSize);
+}
+
+// ========================================
+// ALTO CONTRASTE
+// ========================================
+let highContrast = false;
+
 function toggleContrast() {
-    document.body.classList.toggle('high-contrast');
-    localStorage.setItem('highContrast', document.body.classList.contains('high-contrast') ? '1' : '0');
+    highContrast = !highContrast;
+    
+    if (highContrast) {
+        document.body.classList.add('high-contrast');
+        console.log('🎨 Alto contraste ATIVADO');
+    } else {
+        document.body.classList.remove('high-contrast');
+        console.log('🎨 Alto contraste DESATIVADO');
+    }
+    
+    localStorage.setItem('highContrast', highContrast);
 }
 
-// Aguarda o DOM estar pronto antes de adicionar event listeners
-window.addEventListener('DOMContentLoaded', () => {
-    // --- Event Listeners dos Botões de Fonte ---
-    const decreaseBtn = document.getElementById('decrease-font');
-    const normalBtn = document.getElementById('normal-font');
-    const increaseBtn = document.getElementById('increase-font');
-    
-    if (decreaseBtn) {
-        decreaseBtn.addEventListener('click', function () {
-            setFontSize('font-small');
-        });
-    }
-    
-    if (normalBtn) {
-        normalBtn.addEventListener('click', function () {
-            setFontSize('font-normal');
-        });
-    }
-    
-    if (increaseBtn) {
-        increaseBtn.addEventListener('click', function () {
-            setFontSize('font-large');
-        });
-    }
-    
-    // --- Event Listener do Botão Alto Contraste ---
-    const contrastBtn = document.getElementById('toggle-contrast');
-    if (contrastBtn) {
-        contrastBtn.addEventListener('click', toggleContrast);
-    }
-    
-    // --- Carrega preferências salvas ---
-    const savedFont = localStorage.getItem('fontSize') || 'font-normal';
-    setFontSize(savedFont);
-    
-    if (localStorage.getItem('highContrast') === '1') {
-        document.body.classList.add('high-contrast');
-    }
-    
-    // --- Botão Voltar ao Topo ---
+// ========================================
+// BOTÃO VOLTAR AO TOPO
+// ========================================
+function initBackToTop() {
     const backToTopBtn = document.getElementById('back-to-top');
+    
+    if (!backToTopBtn) return; // Se não existir, não faz nada
+    
+    // Mostrar/ocultar botão baseado no scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add('show');
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.classList.remove('show');
+            backToTopBtn.style.display = 'none';
+        }
+    });
+    
+    // Ação de voltar ao topo
+    // --- Botão Voltar ao Topo ---
+    const backToTop = document.getElementById('back-to-top');
     if (backToTopBtn) {
         window.addEventListener('scroll', function () {
             if (window.scrollY > 200) {
@@ -67,43 +93,68 @@ window.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
-    
-    // --- Foco Acessível nos Botões ---
-    document.querySelectorAll('.accessibility-btn, .btn-login, .btn-enroll, .btn-menu-hero, .btn-noticia, .btn-login-form, .btn-contato-form, .btn-cadastro-form')
-        .forEach(btn => {
-            btn.addEventListener('keyup', function (e) {
-                if (e.key === 'Enter' || e.keyCode === 13) {
-                    btn.click();
-                }
-            });
-        });
-    
-    // --- VLibras Plugin (Verifica se já carregou) ---
-    if (typeof window.VLibras === "undefined") {
-        const script = document.createElement("script");
-        script.src = "https://vlibras.gov.br/app/vlibras-plugin.js";
-        document.body.appendChild(script);
-        script.onload = function () {
-            if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
-        };
+}
+
+// ========================================
+// CARREGAR PREFERÊNCIAS SALVAS
+// ========================================
+function loadUserPreferences() {
+    // Carregar tamanho de fonte salvo
+    const savedFontSize = localStorage.getItem('fontSize');
+    if (savedFontSize) {
+        currentFontSize = parseInt(savedFontSize);
+        document.documentElement.style.fontSize = currentFontSize + 'px';
+        console.log('📂 Fonte carregada:', currentFontSize + 'px');
     }
     
-    // --- Atalhos de Teclado ---
-    // 'Alt + Shift + C' ativa/desativa contraste
-    window.addEventListener('keydown', function (e) {
-        if (e.altKey && e.shiftKey && e.code === 'KeyC') {
-            toggleContrast();
-        }
-    });
+    // Carregar preferência de contraste
+    const savedContrast = localStorage.getItem('highContrast');
+    if (savedContrast === 'true') {
+        highContrast = true;
+        document.body.classList.add('high-contrast');
+        console.log('📂 Alto contraste carregado: ATIVO');
+    }
+}
+
+// ========================================
+// INICIALIZAÇÃO
+// ========================================
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('🚀 Iniciando Global.js...');
     
-    // 'Alt + Shift + F' ciclo de fonte
-    window.addEventListener('keydown', function (e) {
-        if (e.altKey && e.shiftKey && e.code === 'KeyF') {
-            const sizes = ['font-small', 'font-normal', 'font-large', 'font-extra-large'];
-            let current = localStorage.getItem('fontSize') || 'font-normal';
-            let idx = sizes.indexOf(current);
-            idx = (idx + 1) % sizes.length;
-            setFontSize(sizes[idx]);
-        }
-    });
+    // ✅ CARREGAR PREFERÊNCIAS (ESTAVA FALTANDO!)
+    loadUserPreferences();
+    
+    // Inicializar botão voltar ao topo
+    initBackToTop();
+    
+    // Event Listeners dos botões de acessibilidade
+    const decreaseBtn = document.getElementById('decrease-font');
+    const normalBtn = document.getElementById('normal-font');
+    const increaseBtn = document.getElementById('increase-font');
+    const contrastBtn = document.getElementById('toggle-contrast');
+    
+    if (decreaseBtn) {
+        decreaseBtn.addEventListener('click', decreaseFontSize);
+        console.log('✅ Botão A- configurado');
+    }
+    
+    if (normalBtn) {
+        normalBtn.addEventListener('click', normalFontSize);
+        console.log('✅ Botão A configurado');
+    }
+    
+    if (increaseBtn) {
+        increaseBtn.addEventListener('click', increaseFontSize);
+        console.log('✅ Botão A+ configurado');
+    }
+    
+    if (contrastBtn) {
+        contrastBtn.addEventListener('click', toggleContrast);
+        console.log('✅ Botão Alto Contraste configurado');
+    } else {
+        console.warn('⚠️ Botão toggle-contrast não encontrado no HTML');
+    }
+    
+    console.log('✅ Global.js carregado completamente - Acessibilidade ativa!');
 });
