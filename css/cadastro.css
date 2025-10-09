@@ -1,4 +1,19 @@
+/* --- SOCIAL PROOF no Header --- */
+.header-social-proof {
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+    color: #667eea;
+    font-weight: 600;
+}
 
+.header-social-proof i {
+    margin-right: 5px;
+}
+
+.rating {
+    color: #f59e0b;
+}
 
 .cadastro-section {
     background: #f8f9fa;
@@ -103,4 +118,8 @@
 @media (max-width: 480px) {
     .cadastro-card { padding: 24px 10px 20px 10px; }
     .cadastro-card h2 { font-size: 1.2rem; }
+
+    .header-social-proof {
+        display: none;
+    }
 }

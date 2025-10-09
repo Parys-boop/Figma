@@ -1,3 +1,20 @@
+/* --- SOCIAL PROOF no Header --- */
+.header-social-proof {
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+    color: #667eea;
+    font-weight: 600;
+}
+
+.header-social-proof i {
+    margin-right: 5px;
+}
+
+.rating {
+    color: #f59e0b;
+}
+
 .login-section {
     background: #f8f9fa;
     padding: 70px 0 50px 0;
@@ -96,4 +113,8 @@
 @media (max-width: 480px) {
     .login-card { padding: 24px 12px 20px 12px; }
     .login-card h2 { font-size: 1.2rem; }
+
+    .header-social-proof {
+        display: none;
+    }
 }
