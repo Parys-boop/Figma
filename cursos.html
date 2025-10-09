@@ -24,6 +24,12 @@
                     <li><a href="login.html" class="btn-login">Login</a></li>
                 </ul>
             </nav>
+            
+            <!-- SOCIAL PROOF: Prova social no header -->
+            <div class="header-social-proof">
+                <span class="student-count"><i class="fas fa-users"></i> +5.240 alunos</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.8/5.0</span>
+            </div>
         </div>
     </header>
 
@@ -50,15 +56,41 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
+    <!-- SCARCITY BANNER: Promoção com urgência -->
+    <div class="scarcity-banner">
+        <div class="container">
+            <p><i class="fas fa-fire"></i> <strong>Promoção Relâmpago:</strong> Desconto de 30% até <span class="countdown">23:59h de hoje</span> | <strong>Restam apenas 12 vagas</strong> para turma Premium!</p>
+        </div>
+    </div>
+
+    <!-- Hero Section com VISUAL HIERARCHY -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
+                <!-- VISUAL HIERARCHY: Título principal -->
                 <h2 class="hero-title">Descubra Seu Próximo Curso</h2>
                 <p class="hero-subtitle">Aprenda com os melhores cursos online e desenvolva suas habilidades</p>
+                
+                <!-- Barra de busca -->
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
-                    <input type="text" id="search-courses" placeholder="Buscar cursos...">
+                    <input type="text" id="search-courses" placeholder="Buscar cursos por nome, categoria ou instrutor...">
+                </div>
+
+                <!-- SOCIAL PROOF: Estatísticas rápidas -->
+                <div class="hero-stats">
+                    <div class="stat-badge">
+                        <i class="fas fa-book-open"></i>
+                        <span><strong>150+</strong> Cursos</span>
+                    </div>
+                    <div class="stat-badge">
+                        <i class="fas fa-users"></i>
+                        <span><strong>5.240+</strong> Alunos</span>
+                    </div>
+                    <div class="stat-badge">
+                        <i class="fas fa-certificate"></i>
+                        <span><strong>98%</strong> Satisfação</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,10 +100,18 @@
     <section class="filters-section">
         <div class="container">
             <div class="filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="tecnologia">Tecnologia</button>
-                <button class="filter-btn" data-filter="negocios">Negócios</button>
-                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="tecnologia">
+                    <i class="fas fa-code"></i> Tecnologia
+                </button>
+                <button class="filter-btn" data-filter="negocios">
+                    <i class="fas fa-chart-line"></i> Negócios
+                </button>
+                <button class="filter-btn" data-filter="design">
+                    <i class="fas fa-palette"></i> Design
+                </button>
             </div>
         </div>
     </section>
@@ -79,40 +119,70 @@
     <!-- Grid de Cursos -->
     <section class="courses-section">
         <div class="container">
+            <!-- VISUAL HIERARCHY: Título da seção -->
+            <div class="section-header">
+                <h3 class="section-title">Nossos Cursos Mais Populares</h3>
+                <p class="section-subtitle">Escolhidos por milhares de alunos como você</p>
+            </div>
+
             <div class="courses-grid">
                 
-                <!-- Curso 1 -->
+                <!-- Curso 1 - SCARCITY + SOCIAL PROOF + REWARDS -->
                 <div class="course-card" data-category="tecnologia">
                     <div class="course-image">
                         <img src="images/curso-python.jpg" alt="Curso Python" onerror="this.src='https://via.placeholder.com/400x250/667eea/ffffff?text=Python+Completo'">
-                        <div class="course-badge">Bestseller</div>
+                        <div class="course-badge bestseller">🔥 Bestseller</div>
+                        <!-- SCARCITY: Vagas limitadas -->
+                        <div class="course-spots">⚡ Restam 8 vagas</div>
                     </div>
                     <div class="course-content">
                         <div class="course-header">
-                            <span class="course-category">Tecnologia</span>
+                            <span class="course-category tech">
+                                <i class="fas fa-code"></i> Tecnologia
+                            </span>
+                            <!-- SOCIAL PROOF: Rating -->
                             <div class="course-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.8</span>
+                                <small>(2.340)</small>
                             </div>
                         </div>
+                        
                         <h3 class="course-title">Python Completo - Do Básico ao Avançado</h3>
-                        <p class="course-description">Aprenda Python desde os fundamentos até desenvolvimento web, automação e análise de dados.</p>
+                        <p class="course-description">Aprenda Python desde os fundamentos até desenvolvimento web, automação e análise de dados com projetos práticos.</p>
+                        
+                        <!-- REWARDS: Benefícios inclusos -->
+                        <div class="course-rewards">
+                            <div class="reward-tag">
+                                <i class="fas fa-gift"></i> Certificado Grátis
+                            </div>
+                            <div class="reward-tag">
+                                <i class="fas fa-infinity"></i> Acesso Vitalício
+                            </div>
+                        </div>
+
                         <div class="course-meta">
                             <div class="meta-item">
                                 <i class="fas fa-clock"></i>
                                 <span>40h de conteúdo</span>
                             </div>
+                            <!-- SOCIAL PROOF: Número de alunos -->
                             <div class="meta-item">
                                 <i class="fas fa-users"></i>
                                 <span>12.450 alunos</span>
                             </div>
                         </div>
+                        
                         <div class="course-footer">
                             <div class="course-price">
                                 <span class="price-old">R$ 299,90</span>
                                 <span class="price-current">R$ 149,90</span>
+                                <span class="discount-badge">50% OFF</span>
                             </div>
-                            <button class="btn-enroll">Inscrever-se</button>
+                            <!-- CALL TO ACTION: Botão de inscrição -->
+                            <button class="btn-enroll">
+                                <i class="fas fa-rocket"></i> Inscrever-se Agora
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -121,18 +191,33 @@
                 <div class="course-card" data-category="design">
                     <div class="course-image">
                         <img src="images/curso-ux.jpg" alt="Curso UX/UI" onerror="this.src='https://via.placeholder.com/400x250/764ba2/ffffff?text=UX/UI+Design'">
-                        <div class="course-badge new">Novo</div>
+                        <div class="course-badge new">✨ Novo</div>
+                        <div class="course-spots hot">🔥 5 vagas apenas!</div>
                     </div>
                     <div class="course-content">
                         <div class="course-header">
-                            <span class="course-category">Design</span>
+                            <span class="course-category design">
+                                <i class="fas fa-palette"></i> Design
+                            </span>
                             <div class="course-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.9</span>
+                                <small>(1.890)</small>
                             </div>
                         </div>
+                        
                         <h3 class="course-title">UX/UI Design: Crie Experiências Incríveis</h3>
-                        <p class="course-description">Domine os princípios de UX/UI Design e crie interfaces modernas e intuitivas com Figma.</p>
+                        <p class="course-description">Domine os princípios de UX/UI Design e crie interfaces modernas e intuitivas com Figma e Adobe XD.</p>
+                        
+                        <div class="course-rewards">
+                            <div class="reward-tag">
+                                <i class="fas fa-award"></i> Certificado PRO
+                            </div>
+                            <div class="reward-tag">
+                                <i class="fas fa-download"></i> +50 Templates
+                            </div>
+                        </div>
+
                         <div class="course-meta">
                             <div class="meta-item">
                                 <i class="fas fa-clock"></i>
@@ -143,12 +228,16 @@
                                 <span>8.320 alunos</span>
                             </div>
                         </div>
+                        
                         <div class="course-footer">
                             <div class="course-price">
                                 <span class="price-old">R$ 349,90</span>
-                                <span class="price-current">R$ 179,90</span>
+                                <span class="price-current">R$ 174,90</span>
+                                <span class="discount-badge">50% OFF</span>
                             </div>
-                            <button class="btn-enroll">Inscrever-se</button>
+                            <button class="btn-enroll">
+                                <i class="fas fa-rocket"></i> Inscrever-se Agora
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -157,17 +246,32 @@
                 <div class="course-card" data-category="negocios">
                     <div class="course-image">
                         <img src="images/curso-marketing.jpg" alt="Curso Marketing Digital" onerror="this.src='https://via.placeholder.com/400x250/667eea/ffffff?text=Marketing+Digital'">
+                        <div class="course-badge popular">⭐ Popular</div>
                     </div>
                     <div class="course-content">
                         <div class="course-header">
-                            <span class="course-category">Negócios</span>
+                            <span class="course-category business">
+                                <i class="fas fa-chart-line"></i> Negócios
+                            </span>
                             <div class="course-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.7</span>
+                                <small>(3.120)</small>
                             </div>
                         </div>
+                        
                         <h3 class="course-title">Marketing Digital na Prática</h3>
-                        <p class="course-description">Estratégias completas de marketing digital: SEO, Google Ads, redes sociais e muito mais.</p>
+                        <p class="course-description">Estratégias completas de marketing digital: SEO, Google Ads, redes sociais, e-mail marketing e muito mais.</p>
+                        
+                        <div class="course-rewards">
+                            <div class="reward-tag">
+                                <i class="fas fa-book"></i> E-book Grátis
+                            </div>
+                            <div class="reward-tag">
+                                <i class="fas fa-headset"></i> Suporte 24/7
+                            </div>
+                        </div>
+
                         <div class="course-meta">
                             <div class="meta-item">
                                 <i class="fas fa-clock"></i>
@@ -178,12 +282,16 @@
                                 <span>15.890 alunos</span>
                             </div>
                         </div>
+                        
                         <div class="course-footer">
                             <div class="course-price">
                                 <span class="price-old">R$ 279,90</span>
                                 <span class="price-current">R$ 139,90</span>
+                                <span class="discount-badge">50% OFF</span>
                             </div>
-                            <button class="btn-enroll">Inscrever-se</button>
+                            <button class="btn-enroll">
+                                <i class="fas fa-rocket"></i> Inscrever-se Agora
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -192,17 +300,33 @@
                 <div class="course-card" data-category="tecnologia">
                     <div class="course-image">
                         <img src="images/curso-javascript.jpg" alt="Curso JavaScript" onerror="this.src='https://via.placeholder.com/400x250/764ba2/ffffff?text=JavaScript+Moderno'">
+                        <div class="course-badge bestseller">🔥 Top Rated</div>
+                        <div class="course-spots">⚡ 12 vagas restantes</div>
                     </div>
                     <div class="course-content">
                         <div class="course-header">
-                            <span class="course-category">Tecnologia</span>
+                            <span class="course-category tech">
+                                <i class="fas fa-code"></i> Tecnologia
+                            </span>
                             <div class="course-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.9</span>
+                                <small>(4.580)</small>
                             </div>
                         </div>
-                        <h3 class="course-title">JavaScript Moderno: ES6+</h3>
-                        <p class="course-description">Aprenda JavaScript moderno, React, Node.js e crie aplicações web completas.</p>
+                        
+                        <h3 class="course-title">JavaScript Moderno: ES6+ e React</h3>
+                        <p class="course-description">Aprenda JavaScript moderno, React, Node.js e crie aplicações web completas do zero ao deploy.</p>
+                        
+                        <div class="course-rewards">
+                            <div class="reward-tag">
+                                <i class="fas fa-project-diagram"></i> 10 Projetos
+                            </div>
+                            <div class="reward-tag">
+                                <i class="fas fa-infinity"></i> Acesso Vitalício
+                            </div>
+                        </div>
+
                         <div class="course-meta">
                             <div class="meta-item">
                                 <i class="fas fa-clock"></i>
@@ -213,12 +337,16 @@
                                 <span>18.200 alunos</span>
                             </div>
                         </div>
+                        
                         <div class="course-footer">
                             <div class="course-price">
                                 <span class="price-old">R$ 329,90</span>
-                                <span class="price-current">R$ 169,90</span>
+                                <span class="price-current">R$ 164,90</span>
+                                <span class="discount-badge">50% OFF</span>
                             </div>
-                            <button class="btn-enroll">Inscrever-se</button>
+                            <button class="btn-enroll">
+                                <i class="fas fa-rocket"></i> Inscrever-se Agora
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -227,18 +355,32 @@
                 <div class="course-card" data-category="design">
                     <div class="course-image">
                         <img src="images/curso-adobe.jpg" alt="Curso Adobe" onerror="this.src='https://via.placeholder.com/400x250/667eea/ffffff?text=Adobe+Creative'">
-                        <div class="course-badge">Popular</div>
+                        <div class="course-badge popular">💎 Premium</div>
                     </div>
                     <div class="course-content">
                         <div class="course-header">
-                            <span class="course-category">Design</span>
+                            <span class="course-category design">
+                                <i class="fas fa-palette"></i> Design
+                            </span>
                             <div class="course-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.8</span>
+                                <small>(2.760)</small>
                             </div>
                         </div>
+                        
                         <h3 class="course-title">Adobe Creative Suite Completo</h3>
-                        <p class="course-description">Photoshop, Illustrator, Premiere e After Effects do zero ao profissional.</p>
+                        <p class="course-description">Photoshop, Illustrator, Premiere e After Effects do zero ao nível profissional com projetos reais.</p>
+                        
+                        <div class="course-rewards">
+                            <div class="reward-tag">
+                                <i class="fas fa-trophy"></i> Certificado PRO
+                            </div>
+                            <div class="reward-tag">
+                                <i class="fas fa-images"></i> +100 Assets
+                            </div>
+                        </div>
+
                         <div class="course-meta">
                             <div class="meta-item">
                                 <i class="fas fa-clock"></i>
@@ -249,12 +391,16 @@
                                 <span>10.550 alunos</span>
                             </div>
                         </div>
+                        
                         <div class="course-footer">
                             <div class="course-price">
                                 <span class="price-old">R$ 399,90</span>
                                 <span class="price-current">R$ 199,90</span>
+                                <span class="discount-badge">50% OFF</span>
                             </div>
-                            <button class="btn-enroll">Inscrever-se</button>
+                            <button class="btn-enroll">
+                                <i class="fas fa-rocket"></i> Inscrever-se Agora
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -263,17 +409,33 @@
                 <div class="course-card" data-category="negocios">
                     <div class="course-image">
                         <img src="images/curso-excel.jpg" alt="Curso Excel" onerror="this.src='https://via.placeholder.com/400x250/764ba2/ffffff?text=Excel+Avançado'">
+                        <div class="course-badge">📊 Profissional</div>
+                        <div class="course-spots">⚡ 15 vagas</div>
                     </div>
                     <div class="course-content">
                         <div class="course-header">
-                            <span class="course-category">Negócios</span>
+                            <span class="course-category business">
+                                <i class="fas fa-chart-line"></i> Negócios
+                            </span>
                             <div class="course-rating">
                                 <i class="fas fa-star"></i>
                                 <span>4.6</span>
+                                <small>(1.990)</small>
                             </div>
                         </div>
+                        
                         <h3 class="course-title">Excel Avançado para Negócios</h3>
-                        <p class="course-description">Dashboards, macros, VBA e análise de dados profissional com Excel.</p>
+                        <p class="course-description">Dashboards profissionais, macros, VBA e análise de dados avançada para impulsionar sua carreira.</p>
+                        
+                        <div class="course-rewards">
+                            <div class="reward-tag">
+                                <i class="fas fa-file-excel"></i> +50 Planilhas
+                            </div>
+                            <div class="reward-tag">
+                                <i class="fas fa-certificate"></i> Certificado
+                            </div>
+                        </div>
+
                         <div class="course-meta">
                             <div class="meta-item">
                                 <i class="fas fa-clock"></i>
@@ -284,16 +446,34 @@
                                 <span>9.870 alunos</span>
                             </div>
                         </div>
+                        
                         <div class="course-footer">
                             <div class="course-price">
                                 <span class="price-old">R$ 249,90</span>
-                                <span class="price-current">R$ 119,90</span>
+                                <span class="price-current">R$ 124,90</span>
+                                <span class="discount-badge">50% OFF</span>
                             </div>
-                            <button class="btn-enroll">Inscrever-se</button>
+                            <button class="btn-enroll">
+                                <i class="fas fa-rocket"></i> Inscrever-se Agora
+                            </button>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <!-- CALL TO ACTION: Seção final de conversão -->
+            <div class="cta-courses-section">
+                <div class="cta-courses-content">
+                    <h3>🎁 Não encontrou o que procura?</h3>
+                    <p>Cadastre-se GRÁTIS e ganhe acesso a <strong>10 cursos introdutórios</strong> + e-book exclusivo!</p>
+                    <a href="login.html" class="btn-cta-courses">
+                        <i class="fas fa-user-plus"></i> Criar Conta Grátis Agora
+                    </a>
+                    <span class="cta-guarantee">
+                        <i class="fas fa-shield-alt"></i> Sem cartão de crédito necessário
+                    </span>
+                </div>
             </div>
         </div>
     </section>
@@ -305,7 +485,13 @@
                 <div class="footer-section">
                     <h3>Intelectus<span>+</span></h3>
                     <p>Sua plataforma de cursos online para desenvolvimento profissional e pessoal.</p>
+                    <!-- REWARDS: Destaque de benefício -->
+                    <div class="footer-reward">
+                        <i class="fas fa-gift"></i>
+                        <span>Cadastre-se e ganhe 10 cursos grátis!</span>
+                    </div>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Links Rápidos</h4>
                     <ul>
@@ -315,31 +501,31 @@
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Redes Sociais</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Intelectus+. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Parys-boop - Intelectus+. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Botão Voltar ao Topo -->
-    <button id="back-to-top" class="back-to-top" title="Voltar ao topo">
+    <button id="back-to-top" class="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo">
         <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Scripts -->
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
     <script src="js/global.js"></script>
     <script src="js/cursos.js"></script>
+    
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof VLibras !== 'undefined') {
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            }
+        });
+    </script>
 </body>
 </html>

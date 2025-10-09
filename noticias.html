@@ -9,10 +9,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header com Navegação -->
     <header class="header">
         <div class="container">
-            <div class="logo"><h1>Intelectus<span>+</span></h1></div>
+            <div class="logo">
+                <h1>Intelectus<span>+</span></h1>
+            </div>
             <nav class="nav">
                 <ul>
                     <li><a href="menu.html">Home</a></li>
@@ -22,6 +24,12 @@
                     <li><a href="login.html" class="btn-login">Login</a></li>
                 </ul>
             </nav>
+            
+            <!-- SOCIAL PROOF: Prova social no header -->
+            <div class="header-social-proof">
+                <span class="student-count"><i class="fas fa-users"></i> +5.240 alunos</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.8/5.0</span>
+            </div>
         </div>
     </header>
 
@@ -29,73 +37,373 @@
     <div class="accessibility-bar">
         <div class="container">
             <div class="accessibility-controls">
-                <button id="decrease-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A-</span></button>
-                <button id="normal-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A</span></button>
-                <button id="increase-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A+</span></button>
-                <button id="toggle-contrast" class="accessibility-btn"><i class="fas fa-adjust"></i></button>
-                <div vw class="enabled"><div vw-access-button class="active"></div></div>
+                <button id="decrease-font" class="accessibility-btn" title="Diminuir fonte">
+                    <i class="fas fa-font"></i><span>A-</span>
+                </button>
+                <button id="normal-font" class="accessibility-btn" title="Fonte normal">
+                    <i class="fas fa-font"></i><span>A</span>
+                </button>
+                <button id="increase-font" class="accessibility-btn" title="Aumentar fonte">
+                    <i class="fas fa-font"></i><span>A+</span>
+                </button>
+                <button id="toggle-contrast" class="accessibility-btn" title="Alto contraste">
+                    <i class="fas fa-adjust"></i>
+                </button>
+                <div vw class="enabled">
+                    <div vw-access-button class="active"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Hero Notícias -->
-    <section class="noticias-hero">
+    <!-- SCARCITY BANNER: Urgência para webinar -->
+    <div class="scarcity-banner">
         <div class="container">
-            <h2>Últimas Notícias sobre Educação e Tecnologia</h2>
-            <p>Fique por dentro das novidades do mundo dos cursos online!</p>
+            <p><i class="fas fa-video"></i> <strong>Webinar Gratuito HOJE:</strong> "Como conseguir seu primeiro emprego em Tech" às <span class="countdown">19:00h</span> | <strong>Restam 45 vagas!</strong> <a href="#" class="banner-cta">Inscreva-se Já</a></p>
         </div>
-    </section>
+    </div>
 
-    <!-- Grid de Notícias -->
-    <section class="noticias-lista">
+    <!-- Hero Section com VISUAL HIERARCHY -->
+    <section class="hero-section">
         <div class="container">
-            <div class="noticias-grid">
-
-                <!-- Notícia 1 -->
-                <article class="noticia-card">
-                    <img src="images/noticia1.jpg" alt="Imagem notícia 1" onerror="this.src='https://via.placeholder.com/400x230/667eea/fff?text=Notícia+1'">
-                    <div class="noticia-content">
-                        <h3>Plataformas de Cursos Online Crescem 35% em 2025</h3>
-                        <span class="noticia-data">06/10/2025</span>
-                        <p>Segundo pesquisas, o ensino online segue em alta, com novas oportunidades para estudantes e instrutores em todo o Brasil.</p>
-                        <a href="#" class="btn-noticia">Leia mais</a>
+            <div class="hero-content">
+                <!-- VISUAL HIERARCHY: Título principal -->
+                <h2 class="hero-title">Notícias e Atualizações</h2>
+                <p class="hero-subtitle">Fique por dentro das últimas novidades do mundo da tecnologia, educação e desenvolvimento profissional</p>
+                
+                <!-- SOCIAL PROOF: Estatísticas de engagement -->
+                <div class="hero-stats">
+                    <div class="stat-badge">
+                        <i class="fas fa-newspaper"></i>
+                        <span><strong>250+</strong> Artigos</span>
                     </div>
-                </article>
-
-                <!-- Notícia 2 -->
-                <article class="noticia-card">
-                    <img src="images/noticia2.jpg" alt="Imagem notícia 2" onerror="this.src='https://via.placeholder.com/400x230/764ba2/fff?text=Notícia+2'">
-                    <div class="noticia-content">
-                        <h3>Inteligência Artificial Revoluciona Educação a Distância</h3>
-                        <span class="noticia-data">05/10/2025</span>
-                        <p>Ferramentas de IA personalizam o aprendizado e aumentam o engajamento dos alunos nas plataformas digitais.</p>
-                        <a href="#" class="btn-noticia">Leia mais</a>
+                    <div class="stat-badge">
+                        <i class="fas fa-eye"></i>
+                        <span><strong>50K+</strong> Leitores/mês</span>
                     </div>
-                </article>
-
-                <!-- Notícia 3 -->
-                <article class="noticia-card">
-                    <img src="images/noticia3.jpg" alt="Imagem notícia 3" onerror="this.src='https://via.placeholder.com/400x230/667eea/fff?text=Notícia+3'">
-                    <div class="noticia-content">
-                        <h3>Novos Cursos Gratuitos Disponíveis!</h3>
-                        <span class="noticia-data">02/10/2025</span>
-                        <p>Intelectus+ lança trilhas de formação gratuitas para iniciantes em programação, design e negócios.</p>
-                        <a href="#" class="btn-noticia">Leia mais</a>
+                    <div class="stat-badge">
+                        <i class="fas fa-clock"></i>
+                        <span>Atualizado <strong>Diariamente</strong></span>
                     </div>
-                </article>
-
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer + Botão topo -->
+    <!-- Filtros de Categorias -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> Todas
+                </button>
+                <button class="filter-btn" data-filter="tecnologia">
+                    <i class="fas fa-laptop-code"></i> Tecnologia
+                </button>
+                <button class="filter-btn" data-filter="carreira">
+                    <i class="fas fa-briefcase"></i> Carreira
+                </button>
+                <button class="filter-btn" data-filter="educacao">
+                    <i class="fas fa-graduation-cap"></i> Educação
+                </button>
+                <button class="filter-btn" data-filter="eventos">
+                    <i class="fas fa-calendar-alt"></i> Eventos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Notícias -->
+    <section class="news-section">
+        <div class="container">
+            <!-- VISUAL HIERARCHY: Título da seção -->
+            <div class="section-header">
+                <h3 class="section-title">Últimas Notícias</h3>
+                <p class="section-subtitle">Confira as novidades mais recentes</p>
+            </div>
+
+            <!-- Grid de Notícias -->
+            <div class="news-grid">
+                
+                <!-- Notícia Destaque 1 - SCARCITY + REWARDS -->
+                <article class="news-card featured" data-category="tecnologia">
+                    <div class="news-image">
+                        <img src="images/news-ai.jpg" alt="IA no Mercado" onerror="this.src='https://via.placeholder.com/800x450/667eea/ffffff?text=IA+2025'">
+                        <div class="news-badge trending">🔥 Em Alta</div>
+                        <!-- SCARCITY: Tempo limitado -->
+                        <div class="news-time-badge">📅 Publicado há 2h</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category tech">
+                                <i class="fas fa-laptop-code"></i> Tecnologia
+                            </span>
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i> 09 Out 2025
+                            </span>
+                        </div>
+                        
+                        <h3 class="news-title">Inteligência Artificial: As 10 Profissões Mais Demandadas em 2025</h3>
+                        <p class="news-excerpt">Descubra quais são as carreiras mais promissoras na era da IA e como você pode se preparar para conquistar essas oportunidades no mercado...</p>
+                        
+                        <!-- SOCIAL PROOF: Engajamento -->
+                        <div class="news-engagement">
+                            <span class="engagement-item">
+                                <i class="fas fa-eye"></i> 3.240 visualizações
+                            </span>
+                            <span class="engagement-item">
+                                <i class="fas fa-comment"></i> 89 comentários
+                            </span>
+                            <span class="engagement-item">
+                                <i class="fas fa-heart"></i> 542 curtidas
+                            </span>
+                        </div>
+
+                        <!-- REWARDS: Bônus ao ler -->
+                        <div class="news-reward">
+                            <i class="fas fa-gift"></i> Leia e ganhe <strong>E-book gratuito</strong> sobre IA
+                        </div>
+
+                        <!-- CALL TO ACTION -->
+                        <a href="#" class="btn-read-more">
+                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Notícia 2 -->
+                <article class="news-card" data-category="carreira">
+                    <div class="news-image">
+                        <img src="images/news-carreira.jpg" alt="Dicas de Carreira" onerror="this.src='https://via.placeholder.com/600x350/764ba2/ffffff?text=Carreira'">
+                        <div class="news-badge new">✨ Novo</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category career">
+                                <i class="fas fa-briefcase"></i> Carreira
+                            </span>
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i> 08 Out 2025
+                            </span>
+                        </div>
+                        
+                        <h3 class="news-title">Como Construir um Portfólio Profissional que Impressiona</h3>
+                        <p class="news-excerpt">Aprenda as melhores práticas para criar um portfólio que destaque suas habilidades e atraia recrutadores...</p>
+                        
+                        <div class="news-engagement">
+                            <span class="engagement-item">
+                                <i class="fas fa-eye"></i> 1.890 visualizações
+                            </span>
+                            <span class="engagement-item">
+                                <i class="fas fa-comment"></i> 45 comentários
+                            </span>
+                        </div>
+
+                        <div class="news-reward">
+                            <i class="fas fa-download"></i> <strong>Template de portfólio</strong> grátis
+                        </div>
+
+                        <a href="#" class="btn-read-more">
+                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Notícia 3 - SCARCITY -->
+                <article class="news-card" data-category="eventos">
+                    <div class="news-image">
+                        <img src="images/news-evento.jpg" alt="Evento Tech" onerror="this.src='https://via.placeholder.com/600x350/667eea/ffffff?text=Evento+Tech'">
+                        <div class="news-badge event">📅 Evento</div>
+                        <!-- SCARCITY: Vagas limitadas -->
+                        <div class="news-spots-badge">⚡ Últimas 20 vagas!</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category event">
+                                <i class="fas fa-calendar-alt"></i> Eventos
+                            </span>
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i> 07 Out 2025
+                            </span>
+                        </div>
+                        
+                        <h3 class="news-title">TechConf 2025: O Maior Evento de Tecnologia do Brasil</h3>
+                        <p class="news-excerpt">Participe do evento que reunirá os maiores especialistas em tecnologia do país. Palestras, workshops e networking...</p>
+                        
+                        <div class="news-engagement">
+                            <span class="engagement-item">
+                                <i class="fas fa-users"></i> 2.340 inscritos
+                            </span>
+                            <span class="engagement-item">
+                                <i class="fas fa-star"></i> 4.9/5.0
+                            </span>
+                        </div>
+
+                        <div class="news-reward">
+                            <i class="fas fa-ticket-alt"></i> <strong>15% OFF</strong> com código INTELECTUS
+                        </div>
+
+                        <a href="#" class="btn-read-more cta-event">
+                            <i class="fas fa-ticket-alt"></i> Garantir Minha Vaga
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Notícia 4 -->
+                <article class="news-card" data-category="educacao">
+                    <div class="news-image">
+                        <img src="images/news-estudo.jpg" alt="Técnicas de Estudo" onerror="this.src='https://via.placeholder.com/600x350/764ba2/ffffff?text=Educação'">
+                        <div class="news-badge">📚 Educação</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category education">
+                                <i class="fas fa-graduation-cap"></i> Educação
+                            </span>
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i> 06 Out 2025
+                            </span>
+                        </div>
+                        
+                        <h3 class="news-title">7 Técnicas Cientificamente Comprovadas para Estudar Melhor</h3>
+                        <p class="news-excerpt">Descubra métodos validados pela ciência que vão turbinar seus estudos e otimizar seu aprendizado...</p>
+                        
+                        <div class="news-engagement">
+                            <span class="engagement-item">
+                                <i class="fas fa-eye"></i> 5.120 visualizações
+                            </span>
+                            <span class="engagement-item">
+                                <i class="fas fa-comment"></i> 128 comentários
+                            </span>
+                        </div>
+
+                        <div class="news-reward">
+                            <i class="fas fa-file-pdf"></i> <strong>Guia PDF</strong> de técnicas de estudo
+                        </div>
+
+                        <a href="#" class="btn-read-more">
+                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Notícia 5 -->
+                <article class="news-card" data-category="tecnologia">
+                    <div class="news-image">
+                        <img src="images/news-python.jpg" alt="Python 2025" onerror="this.src='https://via.placeholder.com/600x350/667eea/ffffff?text=Python+2025'">
+                        <div class="news-badge trending">🔥 Popular</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category tech">
+                                <i class="fas fa-laptop-code"></i> Tecnologia
+                            </span>
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i> 05 Out 2025
+                            </span>
+                        </div>
+                        
+                        <h3 class="news-title">Python Continua Sendo a Linguagem Mais Demandada do Mercado</h3>
+                        <p class="news-excerpt">Pesquisa revela que Python lidera ranking de linguagens mais procuradas por empresas em 2025...</p>
+                        
+                        <div class="news-engagement">
+                            <span class="engagement-item">
+                                <i class="fas fa-eye"></i> 4.560 visualizações
+                            </span>
+                            <span class="engagement-item">
+                                <i class="fas fa-heart"></i> 789 curtidas
+                            </span>
+                        </div>
+
+                        <div class="news-reward">
+                            <i class="fas fa-code"></i> <strong>Curso introdutório</strong> grátis de Python
+                        </div>
+
+                        <a href="#" class="btn-read-more">
+                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Notícia 6 -->
+                <article class="news-card" data-category="carreira">
+                    <div class="news-image">
+                        <img src="images/news-remoto.jpg" alt="Trabalho Remoto" onerror="this.src='https://via.placeholder.com/600x350/764ba2/ffffff?text=Trabalho+Remoto'">
+                        <div class="news-badge">💼 Carreira</div>
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-category career">
+                                <i class="fas fa-briefcase"></i> Carreira
+                            </span>
+                            <span class="news-date">
+                                <i class="fas fa-calendar"></i> 04 Oct 2025
+                            </span>
+                        </div>
+                        
+                        <h3 class="news-title">Trabalho Remoto: Empresas que Mais Contratam no Brasil</h3>
+                        <p class="news-excerpt">Lista completa das empresas brasileiras e internacionais que oferecem oportunidades remotas em tecnologia...</p>
+                        
+                        <div class="news-engagement">
+                            <span class="engagement-item">
+                                <i class="fas fa-eye"></i> 6.780 visualizações
+                            </span>
+                            <span class="engagement-item">
+                                <i class="fas fa-comment"></i> 234 comentários
+                            </span>
+                        </div>
+
+                        <div class="news-reward">
+                            <i class="fas fa-list"></i> <strong>Lista exclusiva</strong> de 50+ empresas
+                        </div>
+
+                        <a href="#" class="btn-read-more">
+                            <i class="fas fa-book-reader"></i> Ler Notícia Completa
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- CALL TO ACTION: Newsletter -->
+            <div class="newsletter-section">
+                <div class="newsletter-content">
+                    <div class="newsletter-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="newsletter-text">
+                        <h3>📬 Receba Notícias Exclusivas por E-mail</h3>
+                        <p>Cadastre-se e receba semanalmente as melhores notícias, dicas e oportunidades direto na sua caixa de entrada!</p>
+                    </div>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu melhor e-mail" required>
+                        <button type="submit" class="btn-newsletter">
+                            <i class="fas fa-paper-plane"></i> Inscrever-se Grátis
+                        </button>
+                    </form>
+                    <!-- REWARDS -->
+                    <div class="newsletter-reward">
+                        <i class="fas fa-gift"></i> <strong>Bônus:</strong> E-book "10 Tendências Tech 2025" ao se cadastrar!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Intelectus<span>+</span></h3>
                     <p>Sua plataforma de cursos online para desenvolvimento profissional e pessoal.</p>
+                    <!-- REWARDS: Destaque de benefício -->
+                    <div class="footer-reward">
+                        <i class="fas fa-gift"></i>
+                        <span>Cadastre-se e ganhe 10 cursos grátis!</span>
+                    </div>
                 </div>
+                
                 <div class="footer-section">
                     <h4>Links Rápidos</h4>
                     <ul>
@@ -105,26 +413,31 @@
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Redes Sociais</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Parys-boop+. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Parys-boop - Intelectus+. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-    <button id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
 
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <!-- Botão Voltar ao Topo -->
+    <button id="back-to-top" class="back-to-top" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="js/global.js"></script>
     <script src="js/noticias.js"></script>
+    
+    <!-- VLibras -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            if (typeof VLibras !== 'undefined') {
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            }
+        });
+    </script>
 </body>
 </html>

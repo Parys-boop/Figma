@@ -11,7 +11,9 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo"><h1>Intelectus<span>+</span></h1></div>
+            <div class="logo">
+                <h1>Intelectus<span>+</span></h1>
+            </div>
             <nav class="nav">
                 <ul>
                     <li><a href="menu.html" class="active">Home</a></li>
@@ -21,67 +23,213 @@
                     <li><a href="login.html" class="btn-login">Login</a></li>
                 </ul>
             </nav>
+            
+            <!-- SOCIAL PROOF: Prova social no header -->
+            <div class="header-social-proof">
+                <span class="student-count"><i class="fas fa-users"></i> +5.240 alunos</span>
+                <span class="rating"><i class="fas fa-star"></i> 4.8/5.0</span>
+            </div>
         </div>
     </header>
+
     <div class="accessibility-bar">
         <div class="container">
             <div class="accessibility-controls">
-                <button id="decrease-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A-</span></button>
-                <button id="normal-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A</span></button>
-                <button id="increase-font" class="accessibility-btn"><i class="fas fa-font"></i><span>A+</span></button>
-                <button id="toggle-contrast" class="accessibility-btn"><i class="fas fa-adjust"></i></button>
-                <div vw class="enabled"><div vw-access-button class="active"></div></div>
+                <button id="decrease-font" class="accessibility-btn">
+                    <i class="fas fa-font"></i><span>A-</span>
+                </button>
+                <button id="normal-font" class="accessibility-btn">
+                    <i class="fas fa-font"></i><span>A</span>
+                </button>
+                <button id="increase-font" class="accessibility-btn">
+                    <i class="fas fa-font"></i><span>A+</span>
+                </button>
+                <button id="toggle-contrast" class="accessibility-btn">
+                    <i class="fas fa-adjust"></i>
+                </button>
+                
+                <!-- VLibras Widget - ELEMENTO NECESSÁRIO -->
+                <div vw class="enabled">
+                    <div vw-access-button class="active"></div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Hero Banner -->
+    <!-- SCARCITY BANNER: Senso de urgência -->
+    <div class="scarcity-banner">
+        <div class="container">
+            <p><i class="fas fa-fire"></i> <strong>Promoção Relâmpago:</strong> Desconto de 30% até <span class="countdown">23:59h de hoje</span> | <strong>Restam apenas 12 vagas</strong> para turma Premium!</p>
+        </div>
+    </div>
+
+    <!-- Hero Banner com VISUAL HIERARCHY e CALL TO ACTION -->
     <section class="menu-hero">
         <div class="container">
             <div class="menu-hero-content">
-                <h2>Bem-vindo ao Intelectus+</h2>
-                <p>Sua plataforma inovadora para cursos online com acessibilidade e recursos modernos.</p>
-                <a href="cursos.html" class="btn-menu-hero">Ver Cursos</a>
+                <!-- VISUAL HIERARCHY: Título destacado -->
+                <h2 class="hero-title">Transforme sua Carreira com Intelectus+</h2>
+                <p class="hero-subtitle">Sua plataforma inovadora para cursos online com acessibilidade e certificação profissional.</p>
+                
+                <!-- SOCIAL PROOF: Depoimento rápido -->
+                <div class="hero-testimonial">
+                    <div class="testimonial-content">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p>"O Intelectus+ mudou minha vida profissional. Consegui meu emprego dos sonhos em 3 meses!"</p>
+                        <div class="testimonial-author">
+                            <strong>Ana Silva</strong>
+                            <span>Desenvolvedora Full Stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CALL TO ACTION: Botão principal com scarcity -->
+                <div class="cta-section">
+                    <a href="cursos.html" class="btn-menu-hero">
+                        <i class="fas fa-rocket"></i> Começar Agora Grátis
+                        <span class="cta-badge">🔥 12 vagas restantes</span>
+                    </a>
+                    
+                    <!-- REWARDS & INCENTIVES: Garantia de reembolso -->
+                    <p class="cta-guarantee">
+                        <i class="fas fa-shield-alt"></i> Garantia de 7 dias ou seu dinheiro de volta
+                    </p>
+                </div>
+
+                <!-- REWARDS & INCENTIVES: Bônus ao se cadastrar -->
+                <div class="rewards-section">
+                    <h3 class="rewards-title">🎁 Ao se cadastrar HOJE você ganha:</h3>
+                    <div class="rewards-grid">
+                        <div class="reward-item">
+                            <i class="fas fa-gift"></i>
+                            <span>10 Cursos Grátis</span>
+                        </div>
+                        <div class="reward-item">
+                            <i class="fas fa-award"></i>
+                            <span>Certificado Digital</span>
+                        </div>
+                        <div class="reward-item">
+                            <i class="fas fa-book"></i>
+                            <span>E-book Exclusivo</span>
+                        </div>
+                        <div class="reward-item">
+                            <i class="fas fa-headset"></i>
+                            <span>Suporte Premium 24/7</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Destaques -->
+    <!-- Destaques com todos os patterns integrados -->
     <section class="menu-destaques">
         <div class="container">
-            <h3>Destaques da Plataforma</h3>
+            <!-- VISUAL HIERARCHY: Título com destaque -->
+            <h3 class="destaques-title">Por Que Escolher o Intelectus+?</h3>
+            <p class="destaques-subtitle">Mais de 5 mil alunos já transformaram suas carreiras conosco</p>
+
             <div class="destaques-grid">
+                <!-- Card 1 com Social Proof -->
                 <div class="destaque-card">
                     <i class="fas fa-graduation-cap"></i>
-                    <h4>Variedade de Cursos</h4>
+                    <h4>+150 Cursos Disponíveis</h4>
                     <p>Do básico ao avançado em tecnologia, design e negócios.</p>
+                    <span class="card-social-proof">★★★★★ 4.9 (2.340 avaliações)</span>
                 </div>
-                <div class="destaque-card">
-                    <i class="fas fa-universal-access"></i>
-                    <h4>Acessibilidade</h4>
-                    <p>Recursos para todos: VLibras, alto contraste, controle de fonte.</p>
+
+                <!-- Card 2 com Rewards & Incentives -->
+                <div class="destaque-card card-rewards">
+                    <i class="fas fa-trophy"></i>
+                    <h4>Certificado Reconhecido</h4>
+                    <p>Certificação profissional ao finalizar cada curso.</p>
+                    <span class="card-reward-badge"><i class="fas fa-check-circle"></i> 100% Gratuito</span>
                 </div>
-                <div class="destaque-card">
+
+                <!-- Card 3 com Scarcity -->
+                <div class="destaque-card card-scarcity">
                     <i class="fas fa-star"></i>
-                    <h4>Qualidade & Avaliações</h4>
-                    <p>Conteúdos selecionados e bem avaliados por milhares de alunos.</p>
+                    <h4>Turma Premium</h4>
+                    <p>Mentoria individual + projetos reais + networking exclusivo.</p>
+                    <span class="card-scarcity-badge">⚡ Últimas 5 vagas disponíveis</span>
                 </div>
-                <div class="destaque-card">
+
+                <!-- Card 4 com Call to Action -->
+                <div class="destaque-card card-cta">
                     <i class="fas fa-user-plus"></i>
-                    <h4>Cadastre-se</h4>
-                    <p>Crie sua conta grátis e comece a aprender hoje mesmo!</p>
+                    <h4>Cadastro Gratuito</h4>
+                    <p>Crie sua conta e ganhe acesso imediato a 10 cursos!</p>
+                    <a href="login.html" class="card-cta-btn">
+                        <i class="fas fa-sign-in-alt"></i> Criar Conta Grátis
+                    </a>
+                </div>
+            </div>
+
+            <!-- SOCIAL PROOF: Estatísticas -->
+            <div class="stats-section">
+                <div class="stat-item">
+                    <i class="fas fa-users stat-icon"></i>
+                    <span class="stat-number">5.240+</span>
+                    <span class="stat-label">Alunos Ativos</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-book-open stat-icon"></i>
+                    <span class="stat-number">150+</span>
+                    <span class="stat-label">Cursos Disponíveis</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star stat-icon"></i>
+                    <span class="stat-number">4.8/5</span>
+                    <span class="stat-label">Avaliação Média</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-heart stat-icon"></i>
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Taxa de Satisfação</span>
+                </div>
+            </div>
+
+            <!-- REWARDS & INCENTIVES: Seção de benefícios extras -->
+            <div class="benefits-section">
+                <h3 class="benefits-title">🌟 Benefícios Exclusivos para Novos Alunos</h3>
+                <div class="benefits-grid">
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-infinity"></i></div>
+                        <h4>Acesso Vitalício</h4>
+                        <p>Assista quantas vezes quiser, quando quiser</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Aprenda no Celular</h4>
+                        <p>Estude em qualquer lugar pelo app mobile</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-users-cog"></i></div>
+                        <h4>Comunidade Exclusiva</h4>
+                        <p>Networking com +5 mil profissionais</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i class="fas fa-download"></i></div>
+                        <h4>Materiais para Download</h4>
+                        <p>PDFs, templates e recursos extras</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer + Topo -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Intelectus<span>+</span></h3>
                     <p>Sua plataforma de cursos online para desenvolvimento profissional e pessoal.</p>
+                    <!-- REWARDS: Destaque de benefício -->
+                    <div class="footer-reward">
+                        <i class="fas fa-gift"></i>
+                        <span>Cadastre-se e ganhe 10 cursos grátis!</span>
+                    </div>
                 </div>
                 <div class="footer-section">
                     <h4>Links Rápidos</h4>
@@ -92,26 +240,29 @@
                         <li><a href="contato.html">Contato</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h4>Redes Sociais</h4>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Parys-boop+. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Parys-boop - Intelectus+. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-    <button id="back-to-top" class="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
     <script src="js/global.js"></script>
     <script src="js/menu.js"></script>
+    
+    <!-- VLibras: Carrega após o DOM estar pronto -->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        // Espera o DOM e o VLibras carregarem completamente
+        window.addEventListener('load', function() {
+            if (typeof VLibras !== 'undefined') {
+                new window.VLibras.Widget('https://vlibras.gov.br/app');
+            }
+        });
+    </script>
 </body>
 </html>

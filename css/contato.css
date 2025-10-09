@@ -1,101 +1,459 @@
+/* ============================================
+   PÁGINA DE CONTATO - INTELECTUS+
+   Versão Meio Termo - Design Patterns Sutis
+   ============================================ */
 
+/* --- HEADER SOCIAL PROOF --- */
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-.contato-section {
-    background: #f8f9fa;
-    padding: 70px 0 50px 0;
-    min-height: 70vh;
+.logo {
     display: flex;
     align-items: center;
+    gap: 12px;
 }
 
+.header-social-proof {
+    display: flex;
+    gap: 18px;
+    font-size: 0.9rem;
+    color: #667eea;
+    font-weight: 600;
+}
+
+.header-social-proof i {
+    margin-right: 5px;
+}
+
+.rating {
+    color: #f59e0b;
+}
+
+/* --- SEÇÃO DE CONTATO --- */
+.contato-section {
+    background: #f8f9fa;
+    padding: 60px 0 70px;
+    min-height: auto;
+}
+
+/* VISUAL HIERARCHY: Cabeçalho da página */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    color: #667eea;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+/* SOCIAL PROOF: Badge de resposta rápida */
+.response-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+    color: #065f46;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.response-badge i {
+    color: #10b981;
+}
+
+/* Wrapper do conteúdo */
+.contato-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+    margin-bottom: 50px;
+}
+
+/* --- CARD DO FORMULÁRIO --- */
 .contato-card {
     background: white;
-    max-width: 440px;
-    margin: 0 auto;
-    padding: 45px 38px 35px 38px;
+    padding: 40px;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(102,126,234,0.09);
-    text-align: center;
+    box-shadow: 0 8px 32px rgba(102, 126, 234, 0.12);
 }
 
-.contato-card h2 {
-    font-size: 2rem;
-    color: #667eea;
-    font-weight: 700;
-    margin-bottom: 30px;
-}
 
+/* Formulário */
 .contato-form {
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 20px;
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    gap: 4px;
+    gap: 8px;
 }
 
 .input-group label {
     font-weight: 600;
     color: #764ba2;
     font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-group label i {
+    color: #667eea;
+    font-size: 1rem;
 }
 
 .input-group input,
-.input-group textarea {
+.input-group textarea,
+.input-group select {
     width: 100%;
-    padding: 12px 16px;
+    padding: 13px 16px;
     border: 2px solid #e2e8f0;
     border-radius: 10px;
     font-size: 1rem;
-    transition: border 0.2s;
-    resize: none;
+    transition: all 0.3s ease;
+    font-family: inherit;
 }
 
 .input-group input:focus,
-.input-group textarea:focus {
+.input-group textarea:focus,
+.input-group select:focus {
+    outline: none;
     border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
 }
 
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #a0aec0;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.input-group select {
+    cursor: pointer;
+    background: white;
+}
+
+/* CALL TO ACTION: Botão de envio */
 .btn-contato-form {
-    padding: 13px 0;
+    padding: 15px 0;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 12px;
     border: none;
-    font-size: 1.09rem;
+    font-size: 1.1rem;
     margin-top: 10px;
-    transition: background 0.2s, box-shadow 0.3s;
-    box-shadow: 0 5px 18px rgba(102,126,234,0.15);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 18px rgba(102, 126, 234, 0.3);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .btn-contato-form:hover {
     background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-    box-shadow: 0 12px 32px rgba(102,126,234,0.23);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+    transform: translateY(-2px);
 }
 
-.contato-info {
-    margin-top: 24px;
-    font-size: 0.98rem;
-    color: #667eea;
+.btn-contato-form:active {
+    transform: translateY(0);
+}
+
+/* SOCIAL PROOF: Garantia */
+.form-guarantee {
+    margin-top: 20px;
+    text-align: center;
+    color: #718096;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.form-guarantee i {
+    color: #10b981;
+    font-size: 1.1rem;
+}
+
+/* --- SIDEBAR DE INFORMAÇÕES --- */
+.contato-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.info-card h3 {
+    font-size: 1.2rem;
+    color: #667eea;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item i {
+    color: #667eea;
+    font-size: 1.3rem;
+    margin-top: 3px;
+}
+
+.info-item strong {
+    display: block;
+    color: #2d3748;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.info-item a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.info-item a:hover {
+    text-decoration: underline;
+}
+
+.info-item p {
+    color: #718096;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* CALL TO ACTION: Atendimento rápido */
+.alternatives {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.alternatives h3 {
+    color: white;
+}
+
+.quick-contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.quick-contact:last-child {
+    margin-bottom: 0;
+}
+
+.quick-contact i {
+    font-size: 1.5rem;
+}
+
+.quick-contact:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(5px);
+}
+
+.quick-contact.whatsapp i {
+    color: #25D366;
+}
+
+.quick-contact.chat i {
+    color: #fbbf24;
+}
+
+/* SOCIAL PROOF: Depoimento */
+.testimonial {
+    background: #f8f9fa;
+    border-left: 4px solid #667eea;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: #667eea;
+    opacity: 0.3;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #4a5568;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.author {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.contato-info i {
-    margin-right: 7px;
-    color: #764ba2;
+.author strong {
+    color: #2d3748;
+    font-size: 0.95rem;
+}
+
+.stars {
+    display: flex;
+    gap: 3px;
+}
+
+.stars i {
+    color: #fbbf24;
+    font-size: 0.9rem;
+}
+
+
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-item i {
+    font-size: 2.5rem;
+    color: #667eea;
+}
+
+.stat-item strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #667eea;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.stat-item span {
+    display: block;
+    color: #718096;
+    font-size: 0.9rem;
+    margin-top: 3px;
+}
+
+/* FOOTER REWARDS */
+.footer-reward {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.footer-reward i {
+    font-size: 1.2rem;
+    color: #fbbf24;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 968px) {
+    .contato-wrapper {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .page-header h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-social-proof {
+        display: none;
+    }
+
+    .page-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .contato-card {
+        padding: 30px 20px;
+    }
 }
 
 @media (max-width: 480px) {
-    .contato-card { padding: 24px 10px 20px 10px; }
-    .contato-card h2 { font-size: 1.2rem; }
+    .contato-section {
+        padding: 40px 0 50px;
+    }
+
+    .page-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .contato-card {
+        padding: 25px 15px;
+    }
+
+    .response-badge {
+        font-size: 0.85rem;
+        padding: 8px 15px;
+    }
+
+    .stat-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
 }
