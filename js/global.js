@@ -1,11 +1,3 @@
-// ============================================
-// GLOBAL.JS - Intelectus+
-// Funções de Acessibilidade para TODAS as páginas
-// ============================================
-
-// ========================================
-// CONTROLE DE FONTE
-// ========================================
 let currentFontSize = 16; // Tamanho padrão em px
 
 // Aumentar fonte
@@ -59,40 +51,35 @@ function toggleContrast() {
 }
 
 // ========================================
-// BOTÃO VOLTAR AO TOPO
+// BOTÃO VOLTAR AO TOPO (CORRIGIDO - SEM DUPLICAÇÃO)
 // ========================================
 function initBackToTop() {
     const backToTopBtn = document.getElementById('back-to-top');
     
-    if (!backToTopBtn) return; // Se não existir, não faz nada
+    if (!backToTopBtn) {
+        console.warn('⚠️ Botão back-to-top não encontrado');
+        return;
+    }
     
     // Mostrar/ocultar botão baseado no scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
-            backToTopBtn.classList.add('show');
-            backToTopBtn.style.display = 'flex';
+            backToTopBtn.classList.add('visible');
         } else {
-            backToTopBtn.classList.remove('show');
-            backToTopBtn.style.display = 'none';
+            backToTopBtn.classList.remove('visible');
         }
     });
     
     // Ação de voltar ao topo
-    // --- Botão Voltar ao Topo ---
-    const backToTop = document.getElementById('back-to-top');
-    if (backToTopBtn) {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 200) {
-                backToTopBtn.classList.add('visible');
-            } else {
-                backToTopBtn.classList.remove('visible');
-            }
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         });
-        
-        backToTopBtn.addEventListener('click', function () {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    }
+        console.log('⬆️ Voltando ao topo');
+    });
+    
+    console.log('✅ Botão voltar ao topo configurado');
 }
 
 // ========================================
@@ -122,7 +109,7 @@ function loadUserPreferences() {
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🚀 Iniciando Global.js...');
     
-    // ✅ CARREGAR PREFERÊNCIAS (ESTAVA FALTANDO!)
+    // Carregar preferências do usuário
     loadUserPreferences();
     
     // Inicializar botão voltar ao topo
@@ -137,16 +124,22 @@ document.addEventListener('DOMContentLoaded', () => {
     if (decreaseBtn) {
         decreaseBtn.addEventListener('click', decreaseFontSize);
         console.log('✅ Botão A- configurado');
+    } else {
+        console.warn('⚠️ Botão decrease-font não encontrado');
     }
     
     if (normalBtn) {
         normalBtn.addEventListener('click', normalFontSize);
         console.log('✅ Botão A configurado');
+    } else {
+        console.warn('⚠️ Botão normal-font não encontrado');
     }
     
     if (increaseBtn) {
         increaseBtn.addEventListener('click', increaseFontSize);
         console.log('✅ Botão A+ configurado');
+    } else {
+        console.warn('⚠️ Botão increase-font não encontrado');
     }
     
     if (contrastBtn) {
